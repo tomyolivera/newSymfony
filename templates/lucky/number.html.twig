@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Lucky Number{% endblock %}
+
+{% block body %}
+
+    <div>
+        This number is between {{min}} - {{max}} <br>
+        Your lucky number is: <strong>{{number}}</strong> <br>
+    </div>
+
+    {% block javascript %}{% endblock %}
+
+{% endblock %}

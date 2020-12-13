@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Home{% endblock %}
+
+{% block body %}
+
+    {% if is_granted('ROLE_BAN') %}
+        <p class="text-danger h1">Your account is banned, you only have access to the Home page</p>
+    {% endif %}
+    
+    <p class="title">Home</p>
+    
+
+{% endblock %}

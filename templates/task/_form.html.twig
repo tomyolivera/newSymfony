@@ -1,0 +1,17 @@
+{{ form_start(form) }}
+    <div class="form-name">
+        {{ form_label(form.name) }}
+        <div class="form-error">
+            {{ form_errors(form.name) }}
+        </div>
+        {{ form_widget(form.name) }}
+    </div>
+
+    <div class="form-description">
+        {{ form_label(form.description) }}
+        <div class="form-error">
+            {{ form_errors(form.description) }}
+        </div>
+        {{ form_widget(form.description) }}
+    </div>
+{{ form_end(form) }}

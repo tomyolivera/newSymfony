@@ -1,0 +1,31 @@
+{% for user in pagination %}
+    <tr>
+        <td class="px-6 py-4 whitespace-no-wrap">
+            {{ user.id }}
+        </td>
+        <td class="px-6 py-4 whitespace-no-wrap">
+            {{ user.name }}
+        </td>
+        <td class="px-6 py-4 whitespace-no-wrap">
+            {{ user.email }}
+        </td>
+        <td class="px-6 py-4 whitespace-no-wrap">
+            {{ include('admin/_role.html.twig') }}
+        </td>
+        <td class="px-6 py-4 whitespace-no-wrap td_ban_{{ user.id }}">
+            {{ include('admin/_ban_form.html.twig') }}
+        </td>
+        <td class="px-6 py-4 whitespace-no-wrap">
+            <div class="d-inline-block">
+                {{ include('admin/_goto_edit.html.twig') }}
+            </div>
+            <div class="d-inline-block td_delete_{{ user.id }}">
+                {{ include('admin/_delete_form.html.twig') }}
+            </div>
+        </td>
+    </tr>
+{% endfor %}
+
+<div class="navigation my-3">
+    {{ knp_pagination_render(pagination) }}
+</div>

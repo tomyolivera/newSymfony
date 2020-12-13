@@ -1,0 +1,13 @@
+{% if user.ban %}
+    {% if ( user.roles != app.user.roles ) and (user.roles != ['ROLE_OWNER']) %}
+            <button type="button" class="button-red" onclick="ban({{ user.id }})">True</button>
+    {% else %}
+        <button type="button" class="button-red not_enough_permissions">True</button>
+    {% endif %}
+{% else %}
+    {% if ( user.roles != app.user.roles ) and (user.roles != ['ROLE_OWNER']) %}
+            <button type="button" class="button-green" onclick="ban({{ user.id }})">False</button>
+        {% else %}
+            <button type="button" class="button-green not_enough_permissions">False</button>
+    {% endif %}
+{% endif %}

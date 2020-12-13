@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg navbar-light text-light bg-blue-700">
+    <div>
+        <a href="" class="navbar-brand text-light">Welcome to FACER</a>
+    </div>
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#menu-collapse" aria-expanded="false">
+        <i class="material-icons text-white">menu</i>
+    </button>
+    <div id="menu-collapse" class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                <li class="nav-item"><p class="text-warning nav-link disabled uppercase">{{ app.user.name }}</p></li>
+                <li class="nav-item"><a class="text-light nav-link" href="/task">My tasks</a></li>
+                {% if is_granted('ROLE_ADMIN') %}
+                    <li class="nav-item"><a class="text-success nav-link" href="/admin/dashboard">Control</a></li>
+                {% endif %}
+                <li class="nav-item"><a class="text-light nav-link" href="/logout/">Logout</a></li>
+            {% else %}
+                <li class="nav-item"><p class="text-light nav-link disabled" title="Login to access">My tasks</p></li>
+                <li class="nav-item"><a class="text-light nav-link" href="/login">Log In</a></li>
+                <li class="nav-item"><a class="text-light nav-link" href="/register">Register</a></li>
+            {% endif %}
+        </ul>
+    </div>
+</nav>
+
+{# Preloader #}
+<div class="allPage">
+    <div class="preloader"></div>
+</div>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>

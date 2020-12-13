@@ -1,0 +1,19 @@
+{% for rol in user.roles %}
+    <div class="form-roles">
+        {% if user.roles == ['ROLE_OWNER'] %}    
+            <span class="text-yellow-400 d-flex justify-content-between"> {% set role = rol|split('_') %} {{role[1]}} <i>star</i> </span>
+
+            {% elseif (user.roles == ['ROLE_ADMIN']) %}
+            <span class="text-blue-400 d-flex justify-content-between"> {% set role = rol|split('_') %} {{role[1]}} <i>local_fire_department</i> </span>
+
+            {% elseif (user.roles == ['ROLE_MOD']) %}
+            <span class="text-purple-400 d-flex justify-content-between"> {% set role = rol|split('_') %} {{role[1]}} <i>security</i> </span>
+
+            {% elseif (user.roles) == ['ROLE_USER'] %}
+            <span class="text-green-600 d-flex justify-content-between"> {% set role = rol|split('_') %} {{role[1]}} <i>person</i> </span>
+
+            {% else %}
+            <span class="text-red-500 d-flex justify-content-between"> {% set role = rol|split('_') %} {{role[1]}} <i>error</i> </span>
+        {% endif %}
+    </div>
+{% endfor %}

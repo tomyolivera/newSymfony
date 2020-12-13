@@ -1,0 +1,5 @@
+{% if (user.roles != app.user.roles) and (user.roles != ['ROLE_OWNER']) %}
+    <a href="{{ path('admin_users_edit', {'id': user.id}) }}" class="button-yellow"><i>edit</i></a>
+    {% else %}
+    <button class="button-yellow not_enough_permissions"><i>edit</i></button>
+{% endif %}

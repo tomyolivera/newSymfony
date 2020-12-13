@@ -1,0 +1,23 @@
+{{ form_start(form) }}
+
+<div class="form-id">
+    <label for="form_id">Id:</label>
+    <input type="text" name="form_id" disabled value="{{ user.id }}" class="input-customize">
+</div>
+
+<div class="form-email">
+    <label for="form_email">Email:</label>
+    <input type="text" name="form_email" disabled value="{{ user.email }}" class="input-customize">
+</div>
+
+<div class="form-name">
+    <label for="form_name">Name:</label>
+    <input type="text" name="form_name" disabled value="{{ user.name }}" class="input-customize">
+</div>
+
+<div>
+    Roles:
+    {{ form_rest(form.roles) }}
+</div>
+
+{{ form_end(form) }}
