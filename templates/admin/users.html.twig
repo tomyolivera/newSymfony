@@ -4,6 +4,7 @@
 
 {% block body %}
     <div class="flex flex-col">
+        <p class="title">Control users</p>
         <div class="my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
             <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
                 <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
@@ -36,6 +37,9 @@
                     </table>
                 </div>
             </div>
+        </div>
+        <div class="navigation my-3">
+            {{ knp_pagination_render(pagination) }}
         </div>
     </div>
 {% endblock %}
