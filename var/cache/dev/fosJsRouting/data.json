@@ -1,0 +1,1 @@
+{"admin_users_ban":{"path":"\/admin\/users\/ban\/{id}","host":"","defaults":{"_controller":"App\\Controller\\AdminController::changeBan"},"requirements":[],"options":{"compiler_class":"Symfony\\Component\\Routing\\RouteCompiler","expose":true,"utf8":true},"schemes":[],"methods":["GET","POST"],"condition":""}}
