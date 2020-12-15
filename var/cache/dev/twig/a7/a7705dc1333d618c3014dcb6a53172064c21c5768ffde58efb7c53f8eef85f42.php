@@ -106,6 +106,6 @@ class __TwigTemplate_98f099298acdf429356f66e97dfd20db89c69bcde08b00c1b3ac4a4f50f
         {% else %}
             <button type=\"button\" class=\"button-green not_enough_permissions\">False</button>
     {% endif %}
-{% endif %}", "admin/_ban_form.html.twig", "C:\\xampp\\htdocs\\files\\symfony_folders\\symfonyFacer\\templates\\admin\\_ban_form.html.twig");
+{% endif %}", "admin/_ban_form.html.twig", "C:\\xampp\\htdocs\\files\\symfony_folders\\newSymfony\\templates\\admin\\_ban_form.html.twig");
     }
 }

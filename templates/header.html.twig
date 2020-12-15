@@ -1,6 +1,14 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-gray-900 shadow">
+<nav class="navbar navbar-expand-lg navbar-light bg-gray-900 shadow-2xl">
     <div>
-        <a href="" class="navbar-brand text-light">Welcome to FACER</a>
+        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+            <p class="text-light">
+                Welcome: 
+                <span class="text-warning">{{ app.user.name }} </span>
+            </p>
+        {% else %}
+            <a href="" class="navbar-brand text-light">Welcome to FACER</a>
+        {% endif %}
+            
     </div>
     <button class="navbar-toggler" data-toggle="collapse" data-target="#menu-collapse" aria-expanded="false">
         <i class="material-icons text-white">menu</i>
@@ -8,7 +16,7 @@
     <div id="menu-collapse" class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link rounded mx-2" href="#" target="_blank">
+                <a class="nav-link rounded mx-2" href="https://www.facebook.com/tomi.olivera.2004" target="_blank">
                     <img src="https://i.pinimg.com/originals/57/98/53/5798533bb3f2a08ee3514f9c6f6e03be.png" width="35" heigth="35"></img>
                 </a>
             </li>

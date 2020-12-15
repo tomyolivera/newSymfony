@@ -139,6 +139,6 @@ class __TwigTemplate_1e9e4b82613ff45be39142c9bcc266ac9fd23b2b0aa63ed8602cf0809f0
 
         {{ include('admin/_return_to_list.html.twig') }}
     </div>
-{% endblock %}", "admin/_edit.html.twig", "C:\\xampp\\htdocs\\files\\symfony_folders\\symfonyFacer\\templates\\admin\\_edit.html.twig");
+{% endblock %}", "admin/_edit.html.twig", "C:\\xampp\\htdocs\\files\\symfony_folders\\newSymfony\\templates\\admin\\_edit.html.twig");
     }
 }

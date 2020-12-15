@@ -1720,6 +1720,6 @@ class __TwigTemplate_baaf34c02e7cb692742b5593ebaa7ebf7a6b72c678a7b32a4acf270d203
     });
 
 /*]]>*/</script>
-", "@WebProfiler/Profiler/base_js.html.twig", "C:\\xampp\\htdocs\\files\\symfony_folders\\symfonyFacer\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Profiler\\base_js.html.twig");
+", "@WebProfiler/Profiler/base_js.html.twig", "C:\\xampp\\htdocs\\files\\symfony_folders\\newSymfony\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Profiler\\base_js.html.twig");
     }
 }

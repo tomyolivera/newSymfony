@@ -58,37 +58,39 @@ class __TwigTemplate_d9782bcea1b0c99db27a0d6e3de6d8808482c46234c65363af45e45a138
     ";
         // line 9
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 18
+        // line 23
         echo "    
   </head>
-  <body class=\"bg-gray-300\">
+  <body class=\"bg-gray-400\">
     
     <div class=\"d-flex\">
-        ";
-        // line 23
-        $this->loadTemplate("sideBar.html.twig", "base.html.twig", 23)->display($context);
-        // line 24
+      ";
+        // line 28
+        $this->loadTemplate("sideBar.html.twig", "base.html.twig", 28)->display($context);
+        // line 29
         echo "
       <div class=\"w-100\">
         ";
-        // line 26
-        $this->loadTemplate("header.html.twig", "base.html.twig", 26)->display($context);
-        // line 27
+        // line 31
+        $this->loadTemplate("header.html.twig", "base.html.twig", 31)->display($context);
+        // line 32
         echo "
         <div class=\"content mt-3\" style=\"overflow:auto;\">
           ";
-        // line 29
+        // line 34
         $this->displayBlock('body', $context, $blocks);
-        // line 30
+        // line 35
         echo "        <div>
+
       </div>
+
     </div>
 
 
     ";
-        // line 35
+        // line 42
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 47
+        // line 54
         echo "
   </body>
 </html>";
@@ -135,10 +137,16 @@ class __TwigTemplate_d9782bcea1b0c99db27a0d6e3de6d8808482c46234c65363af45e45a138
       <!-- Materialize Icons -->
       <link href=\"https://fonts.googleapis.com/icon?family=Material+Icons\" rel=\"stylesheet\">
 
-      <link rel=\"stylesheet\" href=\"";
-        // line 16
+      ";
+        // line 17
+        echo "      <link rel=\"stylesheet\" href=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/style.css"), "html", null, true);
         echo "\">
+
+      ";
+        // line 20
+        echo "      <script src=\"https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js\"></script>
+      <script src=\"https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.js\"></script>
     ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -148,7 +156,7 @@ class __TwigTemplate_d9782bcea1b0c99db27a0d6e3de6d8808482c46234c65363af45e45a138
 
     }
 
-    // line 29
+    // line 34
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -166,7 +174,7 @@ class __TwigTemplate_d9782bcea1b0c99db27a0d6e3de6d8808482c46234c65363af45e45a138
 
     }
 
-    // line 35
+    // line 42
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -176,12 +184,12 @@ class __TwigTemplate_d9782bcea1b0c99db27a0d6e3de6d8808482c46234c65363af45e45a138
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 36
+        // line 43
         echo "      <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\" integrity=\"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM\" crossorigin=\"anonymous\"></script>
       <script src=\"https://code.jquery.com/jquery-3.4.1.min.js\" integrity=\"sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=\" crossorigin=\"anonymous\"></script>
       <script src=\"//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js\"></script>
       <script src=\"";
-        // line 39
+        // line 46
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/general.js"), "html", null, true);
         echo "\"></script>
 
@@ -211,7 +219,7 @@ class __TwigTemplate_d9782bcea1b0c99db27a0d6e3de6d8808482c46234c65363af45e45a138
 
     public function getDebugInfo()
     {
-        return array (  185 => 39,  180 => 36,  170 => 35,  152 => 29,  140 => 16,  132 => 10,  122 => 9,  104 => 4,  92 => 47,  90 => 35,  83 => 30,  81 => 29,  77 => 27,  75 => 26,  71 => 24,  69 => 23,  62 => 18,  60 => 9,  52 => 4,  47 => 1,);
+        return array (  193 => 46,  188 => 43,  178 => 42,  160 => 34,  148 => 20,  142 => 17,  134 => 10,  124 => 9,  106 => 4,  94 => 54,  92 => 42,  83 => 35,  81 => 34,  77 => 32,  75 => 31,  71 => 29,  69 => 28,  62 => 23,  60 => 9,  52 => 4,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -231,14 +239,19 @@ class __TwigTemplate_d9782bcea1b0c99db27a0d6e3de6d8808482c46234c65363af45e45a138
       <!-- Materialize Icons -->
       <link href=\"https://fonts.googleapis.com/icon?family=Material+Icons\" rel=\"stylesheet\">
 
+      {# CSS #}
       <link rel=\"stylesheet\" href=\"{{asset('css/style.css')}}\">
+
+      {# VUE #}
+      <script src=\"https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js\"></script>
+      <script src=\"https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.js\"></script>
     {% endblock %}
     
   </head>
-  <body class=\"bg-gray-300\">
+  <body class=\"bg-gray-400\">
     
     <div class=\"d-flex\">
-        {% include \"sideBar.html.twig\" %}
+      {% include \"sideBar.html.twig\" %}
 
       <div class=\"w-100\">
         {% include \"header.html.twig\" %}
@@ -246,7 +259,9 @@ class __TwigTemplate_d9782bcea1b0c99db27a0d6e3de6d8808482c46234c65363af45e45a138
         <div class=\"content mt-3\" style=\"overflow:auto;\">
           {% block body %}{% endblock %}
         <div>
+
       </div>
+
     </div>
 
 
@@ -264,6 +279,6 @@ class __TwigTemplate_d9782bcea1b0c99db27a0d6e3de6d8808482c46234c65363af45e45a138
     {% endblock %}
 
   </body>
-</html>", "base.html.twig", "C:\\xampp\\htdocs\\files\\symfony_folders\\symfonyFacer\\templates\\base.html.twig");
+</html>", "base.html.twig", "C:\\xampp\\htdocs\\files\\symfony_folders\\newSymfony\\templates\\base.html.twig");
     }
 }

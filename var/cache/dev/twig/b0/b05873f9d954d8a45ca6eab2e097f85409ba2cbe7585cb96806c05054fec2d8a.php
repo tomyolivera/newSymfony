@@ -96,12 +96,8 @@ class __TwigTemplate_7ad76fbe17b6d6f7f99c99388064397bd869508f5ca85cff2f53ee89d8a
         </a>
         ";
         // line 12
-        if ((isset($context["tasks"]) || array_key_exists("tasks", $context) ? $context["tasks"] : (function () { throw new RuntimeError('Variable "tasks" does not exist.', 12, $this->source); })())) {
-            // line 13
-            echo "            <button id=\"deleteAllTasks\" class=\"mx-2 button-red d-flex align-center\">Delete all <i>delete</i></button>
-        ";
-        }
-        // line 15
+        $this->loadTemplate("task/_delete_all.html.twig", "task/index.html.twig", 12)->display($context);
+        // line 13
         echo "    </div>
 
     <div class=\"flex flex-col\">
@@ -127,9 +123,9 @@ class __TwigTemplate_7ad76fbe17b6d6f7f99c99388064397bd869508f5ca85cff2f53ee89d8a
                         </thead>
                         <tbody class=\"bg-dark text-light divide-y divide-gray-200\">
                             ";
-        // line 39
+        // line 37
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["tasks"]) || array_key_exists("tasks", $context) ? $context["tasks"] : (function () { throw new RuntimeError('Variable "tasks" does not exist.', 39, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["tasks"]) || array_key_exists("tasks", $context) ? $context["tasks"] : (function () { throw new RuntimeError('Variable "tasks" does not exist.', 37, $this->source); })()));
         $context['_iterated'] = false;
         $context['loop'] = [
           'parent' => $context['_parent'],
@@ -149,32 +145,32 @@ class __TwigTemplate_7ad76fbe17b6d6f7f99c99388064397bd869508f5ca85cff2f53ee89d8a
                                 <tr>
                                     <td class=\"px-6 py-4\">
                                         ";
-            // line 42
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["task"], "name", [], "any", false, false, false, 42), "html", null, true);
+            // line 40
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["task"], "name", [], "any", false, false, false, 40), "html", null, true);
             echo "
                                     </td>
 
                                     <td class=\"px-6 py-4\">
                                         ";
-            // line 46
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["task"], "description", [], "any", false, false, false, 46), "html", null, true);
+            // line 44
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["task"], "description", [], "any", false, false, false, 44), "html", null, true);
             echo "
                                     </td>
 
                                     <td class=\"px-6 py-4\">
                                         ";
-            // line 50
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["task"], "dateFor", [], "any", false, false, false, 50), "d-m-Y"), "html", null, true);
+            // line 48
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["task"], "dateFor", [], "any", false, false, false, 48), "d-m-Y"), "html", null, true);
             echo "
                                     </td>
 
                                     <td class=\"px-6 py-4\">
                                         <a href=\"";
-            // line 54
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("task_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["task"], "id", [], "any", false, false, false, 54)]), "html", null, true);
+            // line 52
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("task_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["task"], "id", [], "any", false, false, false, 52)]), "html", null, true);
             echo "\" class=\"button-yellow\"><i>edit</i></a>
                                         ";
-            // line 55
+            // line 53
             echo twig_include($this->env, $context, "task/_delete_form.html.twig");
             echo "
                                     </td>
@@ -191,7 +187,7 @@ class __TwigTemplate_7ad76fbe17b6d6f7f99c99388064397bd869508f5ca85cff2f53ee89d8a
             }
         }
         if (!$context['_iterated']) {
-            // line 59
+            // line 57
             echo "                                <tr>
                                     <td class=\"px-6 py-4 whitespace-no-wrap\">
                                         <p>You do not have any task yet!</p>
@@ -207,7 +203,7 @@ class __TwigTemplate_7ad76fbe17b6d6f7f99c99388064397bd869508f5ca85cff2f53ee89d8a
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['task'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 70
+        // line 68
         echo "                        </tbody>
                     </table>
                 </div>
@@ -236,7 +232,7 @@ class __TwigTemplate_7ad76fbe17b6d6f7f99c99388064397bd869508f5ca85cff2f53ee89d8a
 
     public function getDebugInfo()
     {
-        return array (  211 => 70,  195 => 59,  178 => 55,  174 => 54,  167 => 50,  160 => 46,  153 => 42,  131 => 39,  105 => 15,  101 => 13,  99 => 12,  93 => 9,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  207 => 68,  191 => 57,  174 => 53,  170 => 52,  163 => 48,  156 => 44,  149 => 40,  127 => 37,  101 => 13,  99 => 12,  93 => 9,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -252,9 +248,7 @@ class __TwigTemplate_7ad76fbe17b6d6f7f99c99388064397bd869508f5ca85cff2f53ee89d8a
         <a href=\"{{ path('task_new') }}\" class=\"button-green\">
             New Task
         </a>
-        {% if tasks %}
-            <button id=\"deleteAllTasks\" class=\"mx-2 button-red d-flex align-center\">Delete all <i>delete</i></button>
-        {% endif %}
+        {% include \"task/_delete_all.html.twig\" %}
     </div>
 
     <div class=\"flex flex-col\">
@@ -317,6 +311,6 @@ class __TwigTemplate_7ad76fbe17b6d6f7f99c99388064397bd869508f5ca85cff2f53ee89d8a
         </div>
     </div>
 
-{% endblock %}", "task/index.html.twig", "C:\\xampp\\htdocs\\files\\symfony_folders\\symfonyFacer\\templates\\task\\index.html.twig");
+{% endblock %}", "task/index.html.twig", "C:\\xampp\\htdocs\\files\\symfony_folders\\newSymfony\\templates\\task\\index.html.twig");
     }
 }

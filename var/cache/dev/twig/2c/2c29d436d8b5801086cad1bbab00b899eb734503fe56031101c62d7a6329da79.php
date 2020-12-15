@@ -86,19 +86,17 @@ class __TwigTemplate_4de0a20a230047607ec955618255bcd5959a88450f0f742e159c63e4132
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <div class=\"container\">
-        <p class=\"title\">New Task</h1>
+        echo "    <p class=\"title\">New Task</h1>
 
-        ";
-        // line 9
+    ";
+        // line 8
         echo twig_include($this->env, $context, "task/_form.html.twig");
         echo "
 
-        ";
-        // line 11
+    ";
+        // line 10
         echo twig_include($this->env, $context, "task/return_to_list.html.twig");
         echo "
-    </div>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -108,7 +106,7 @@ class __TwigTemplate_4de0a20a230047607ec955618255bcd5959a88450f0f742e159c63e4132
 
     }
 
-    // line 15
+    // line 13
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -118,12 +116,12 @@ class __TwigTemplate_4de0a20a230047607ec955618255bcd5959a88450f0f742e159c63e4132
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 16
+        // line 14
         echo "    ";
         $this->displayParentBlock("javascripts", $context, $blocks);
         echo "
     <script src=\"";
-        // line 17
+        // line 15
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/newTask.js"), "html", null, true);
         echo "\"></script>
 ";
@@ -147,7 +145,7 @@ class __TwigTemplate_4de0a20a230047607ec955618255bcd5959a88450f0f742e159c63e4132
 
     public function getDebugInfo()
     {
-        return array (  127 => 17,  122 => 16,  112 => 15,  99 => 11,  94 => 9,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
+        return array (  125 => 15,  120 => 14,  110 => 13,  98 => 10,  93 => 8,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -157,18 +155,16 @@ class __TwigTemplate_4de0a20a230047607ec955618255bcd5959a88450f0f742e159c63e4132
 {% block title %}New Task{% endblock %}
 
 {% block body %}
-    <div class=\"container\">
-        <p class=\"title\">New Task</h1>
+    <p class=\"title\">New Task</h1>
 
-        {{ include('task/_form.html.twig') }}
+    {{ include('task/_form.html.twig') }}
 
-        {{ include('task/return_to_list.html.twig') }}
-    </div>
+    {{ include('task/return_to_list.html.twig') }}
 {% endblock %}
 
 {% block javascripts %}
     {{ parent() }}
     <script src=\"{{asset('js/newTask.js')}}\"></script>
-{% endblock %}", "task/new.html.twig", "C:\\xampp\\htdocs\\files\\symfony_folders\\symfonyFacer\\templates\\task\\new.html.twig");
+{% endblock %}", "task/new.html.twig", "C:\\xampp\\htdocs\\files\\symfony_folders\\newSymfony\\templates\\task\\new.html.twig");
     }
 }

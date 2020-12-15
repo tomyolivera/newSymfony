@@ -40,8 +40,8 @@ class __TwigTemplate_50f8d956006720038c06bb800177c848dd9375660b220b659873b32775e
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "sideBar.html.twig"));
 
         // line 1
-        echo "<div class=\"sidebar-container text-light bg-dark shadow\">
-    <div class=\"logo bg-info\">
+        echo "<div class=\"sidebar-container text-light bg-gray-800 shadow-2xl\">
+    <div class=\"logo bg-gray-800\">
         <h4 class=\"h4 mt-2\">FACER</h4>
     </div>
     <div class=\"menu\">
@@ -57,15 +57,15 @@ class __TwigTemplate_50f8d956006720038c06bb800177c848dd9375660b220b659873b32775e
         } else {
             // line 11
             echo "        
-            <a href=\"";
+                <a href=\"";
             // line 12
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
-            echo "\" class=\"d-block p-3 d-flex align-center text-yellow-300\"><i>home</i> Home</a>
-            <a href=\"";
+            echo "\" class=\"d-block p-3 d-flex align-center text-yellow-500\"><i>home</i> Home</a>
+                <a href=\"";
             // line 13
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("task_index");
             echo "\" class=\"d-block p-3 d-flex align-center text-green-400\"><i>work</i> Tasks</a>
-            <a href=\"#\" class=\"d-block p-3 d-flex align-center text-pink-600\"><i>chat</i> Chats</a>
+                <a href=\"#\" class=\"d-block p-3 d-flex align-center text-pink-600\"><i>chat</i> Chats</a>
             ";
             // line 15
             if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("IS_AUTHENTICATED_FULLY")) {
@@ -86,17 +86,23 @@ class __TwigTemplate_50f8d956006720038c06bb800177c848dd9375660b220b659873b32775e
                 echo "                <a href=\"";
                 echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
                 echo "\" class=\"d-block p-3 d-flex align-center text-red-600\"><i>logout</i> Logout</a>
-                ";
+            ";
             } else {
-                // line 21
-                echo " 
+                // line 22
+                echo "                <a href=\"";
+                echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
+                echo "\" class=\"d-block p-3 d-flex align-center text-green-400\"><i>login</i> Login</a>
+                <a href=\"";
+                // line 23
+                echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("register");
+                echo "\" class=\"d-block p-3 d-flex align-center text-blue-500\"><i>person_add</i> Register</a>
             ";
             }
-            // line 23
+            // line 25
             echo "            
         ";
         }
-        // line 25
+        // line 27
         echo "    </div>
 </div>
 
@@ -137,13 +143,13 @@ class __TwigTemplate_50f8d956006720038c06bb800177c848dd9375660b220b659873b32775e
 
     public function getDebugInfo()
     {
-        return array (  100 => 25,  96 => 23,  92 => 21,  86 => 20,  80 => 18,  78 => 17,  73 => 16,  71 => 15,  66 => 13,  62 => 12,  59 => 11,  52 => 7,  50 => 6,  43 => 1,);
+        return array (  106 => 27,  102 => 25,  97 => 23,  92 => 22,  86 => 20,  80 => 18,  78 => 17,  73 => 16,  71 => 15,  66 => 13,  62 => 12,  59 => 11,  52 => 7,  50 => 6,  43 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("<div class=\"sidebar-container text-light bg-dark shadow\">
-    <div class=\"logo bg-info\">
+        return new Source("<div class=\"sidebar-container text-light bg-gray-800 shadow-2xl\">
+    <div class=\"logo bg-gray-800\">
         <h4 class=\"h4 mt-2\">FACER</h4>
     </div>
     <div class=\"menu\">
@@ -153,16 +159,18 @@ class __TwigTemplate_50f8d956006720038c06bb800177c848dd9375660b220b659873b32775e
                 <p>For more info, click <a class=\"text-info\" href=\"#\">here</a></p>
             </div>
            {% else %}        
-            <a href=\"{{path('index')}}\" class=\"d-block p-3 d-flex align-center text-yellow-300\"><i>home</i> Home</a>
-            <a href=\"{{path('task_index')}}\" class=\"d-block p-3 d-flex align-center text-green-400\"><i>work</i> Tasks</a>
-            <a href=\"#\" class=\"d-block p-3 d-flex align-center text-pink-600\"><i>chat</i> Chats</a>
+                <a href=\"{{path('index')}}\" class=\"d-block p-3 d-flex align-center text-yellow-500\"><i>home</i> Home</a>
+                <a href=\"{{path('task_index')}}\" class=\"d-block p-3 d-flex align-center text-green-400\"><i>work</i> Tasks</a>
+                <a href=\"#\" class=\"d-block p-3 d-flex align-center text-pink-600\"><i>chat</i> Chats</a>
             {% if is_granted('IS_AUTHENTICATED_FULLY') %}
                 <a href=\"{{path('profile')}}\" class=\"d-block p-3 d-flex align-center text-blue-600\"><i>person</i> Profile</a>
             {% if is_granted('ROLE_ADMIN') %}
                 <a href=\"{{path('admin')}}\" class=\"d-block p-3 d-flex align-center text-yellow-600\"><i>admin_panel_settings</i> Admin</a>
             {% endif %}
                 <a href=\"{{path('app_logout')}}\" class=\"d-block p-3 d-flex align-center text-red-600\"><i>logout</i> Logout</a>
-                {% else %} 
+            {% else %}
+                <a href=\"{{path('app_login')}}\" class=\"d-block p-3 d-flex align-center text-green-400\"><i>login</i> Login</a>
+                <a href=\"{{path('register')}}\" class=\"d-block p-3 d-flex align-center text-blue-500\"><i>person_add</i> Register</a>
             {% endif %}
             
         {% endif %}
@@ -185,6 +193,6 @@ class __TwigTemplate_50f8d956006720038c06bb800177c848dd9375660b220b659873b32775e
         text-decoration: none;
         color:white;
     }
-</style>", "sideBar.html.twig", "C:\\xampp\\htdocs\\files\\symfony_folders\\symfonyFacer\\templates\\sideBar.html.twig");
+</style>", "sideBar.html.twig", "C:\\xampp\\htdocs\\files\\symfony_folders\\newSymfony\\templates\\sideBar.html.twig");
     }
 }

@@ -94,27 +94,27 @@ class __TwigTemplate_60aab6c5eea98eb7ed666a6b19a09c35a6020d9d00ef6976dadf01389e9
                     <table class=\"min-w-full divide-y divide-gray-200\">
                         <thead>
                             <tr>
-                                <th class=\"px-6 py-3 bg-gray-500 text-left text-xs leading-4 font-medium text-light uppercase tracking-wider\">
+                                <th class=\"px-6 py-3 bg-gray-900 text-xs text-light uppercase\">
                                     Id
                                 </th>
-                                <th class=\"px-6 py-3 bg-gray-500 text-left text-xs leading-4 font-medium text-light uppercase tracking-wider\">
+                                <th class=\"px-6 py-3 bg-gray-900 text-xs text-light uppercase\">
                                     Name
                                 </th>
-                                <th class=\"px-6 py-3 bg-gray-500 text-left text-xs leading-4 font-medium text-light uppercase tracking-wider\">
+                                <th class=\"px-6 py-3 bg-gray-900 text-xs text-light uppercase\">
                                     Email
                                 </th>
-                                <th class=\"px-6 py-3 bg-gray-500 text-left text-xs leading-4 font-medium text-light uppercase tracking-wider\">
+                                <th class=\"px-6 py-3 bg-gray-900 text-xs text-light uppercase\">
                                     Roles
                                 </th>
-                                <th class=\"px-6 py-3 bg-gray-500 text-left text-xs leading-4 font-medium text-light uppercase tracking-wider\">
+                                <th class=\"px-6 py-3 bg-gray-900 text-xs text-light uppercase\">
                                     Ban
                                 </th>
-                                <th class=\"px-6 py-3 bg-gray-500 text-left text-xs leading-4 font-medium text-light uppercase tracking-wider \">
+                                <th class=\"px-6 py-3 bg-gray-900 text-xs text-light uppercase \">
                                     Action
                                 </th>
                             </tr>
                         </thead>
-                        <tbody class=\"bg-white divide-y divide-gray-200\" id=\"tbody\">
+                        <tbody class=\"bg-gray-800 text-light divide-y divide-gray-200\" id=\"tbody\">
                             ";
         // line 35
         echo twig_include($this->env, $context, "admin/_table.html.twig");
@@ -211,27 +211,27 @@ class __TwigTemplate_60aab6c5eea98eb7ed666a6b19a09c35a6020d9d00ef6976dadf01389e9
                     <table class=\"min-w-full divide-y divide-gray-200\">
                         <thead>
                             <tr>
-                                <th class=\"px-6 py-3 bg-gray-500 text-left text-xs leading-4 font-medium text-light uppercase tracking-wider\">
+                                <th class=\"px-6 py-3 bg-gray-900 text-xs text-light uppercase\">
                                     Id
                                 </th>
-                                <th class=\"px-6 py-3 bg-gray-500 text-left text-xs leading-4 font-medium text-light uppercase tracking-wider\">
+                                <th class=\"px-6 py-3 bg-gray-900 text-xs text-light uppercase\">
                                     Name
                                 </th>
-                                <th class=\"px-6 py-3 bg-gray-500 text-left text-xs leading-4 font-medium text-light uppercase tracking-wider\">
+                                <th class=\"px-6 py-3 bg-gray-900 text-xs text-light uppercase\">
                                     Email
                                 </th>
-                                <th class=\"px-6 py-3 bg-gray-500 text-left text-xs leading-4 font-medium text-light uppercase tracking-wider\">
+                                <th class=\"px-6 py-3 bg-gray-900 text-xs text-light uppercase\">
                                     Roles
                                 </th>
-                                <th class=\"px-6 py-3 bg-gray-500 text-left text-xs leading-4 font-medium text-light uppercase tracking-wider\">
+                                <th class=\"px-6 py-3 bg-gray-900 text-xs text-light uppercase\">
                                     Ban
                                 </th>
-                                <th class=\"px-6 py-3 bg-gray-500 text-left text-xs leading-4 font-medium text-light uppercase tracking-wider \">
+                                <th class=\"px-6 py-3 bg-gray-900 text-xs text-light uppercase \">
                                     Action
                                 </th>
                             </tr>
                         </thead>
-                        <tbody class=\"bg-white divide-y divide-gray-200\" id=\"tbody\">
+                        <tbody class=\"bg-gray-800 text-light divide-y divide-gray-200\" id=\"tbody\">
                             {{ include('admin/_table.html.twig') }}
                         </tbody>
                     </table>
@@ -255,6 +255,6 @@ class __TwigTemplate_60aab6c5eea98eb7ed666a6b19a09c35a6020d9d00ef6976dadf01389e9
             alert(\"You don't have enough permissions for this action\");
         })
     </script>
-{% endblock %}", "admin/users.html.twig", "C:\\xampp\\htdocs\\files\\symfony_folders\\symfonyFacer\\templates\\admin\\users.html.twig");
+{% endblock %}", "admin/users.html.twig", "C:\\xampp\\htdocs\\files\\symfony_folders\\newSymfony\\templates\\admin\\users.html.twig");
     }
 }

@@ -206,6 +206,6 @@ class __TwigTemplate_9d9e01389c6b4454498fd7d3fe60964cbae824ab78a7f5b10e271143d75
     </div>
 </div>
 {% endblock %}
-", "security/login.html.twig", "C:\\xampp\\htdocs\\files\\symfony_folders\\symfonyFacer\\templates\\security\\login.html.twig");
+", "security/login.html.twig", "C:\\xampp\\htdocs\\files\\symfony_folders\\newSymfony\\templates\\security\\login.html.twig");
     }
 }

@@ -58,31 +58,31 @@ class __TwigTemplate_956c8ea1a688535038a55912802f838437fa005404bb72261112be4d172
         foreach ($context['_seq'] as $context["_key"] => $context["user"]) {
             // line 2
             echo "    <tr>
-        <td class=\"px-6 py-4 whitespace-no-wrap\">
+        <td class=\"px-6 py-4\">
             ";
             // line 4
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 4), "html", null, true);
             echo "
         </td>
-        <td class=\"px-6 py-4 whitespace-no-wrap\">
+        <td class=\"px-6 py-4\">
             ";
             // line 7
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "name", [], "any", false, false, false, 7), "html", null, true);
             echo "
         </td>
-        <td class=\"px-6 py-4 whitespace-no-wrap\">
+        <td class=\"px-6 py-4\">
             ";
             // line 10
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "email", [], "any", false, false, false, 10), "html", null, true);
             echo "
         </td>
-        <td class=\"px-6 py-4 whitespace-no-wrap\">
+        <td class=\"px-6 py-4\">
             ";
             // line 13
             echo twig_include($this->env, $context, "admin/_role.html.twig");
             echo "
         </td>
-        <td class=\"px-6 py-4 whitespace-no-wrap td_ban_";
+        <td class=\"px-6 py-4 td_ban_";
             // line 15
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 15), "html", null, true);
             echo "\">
@@ -91,7 +91,7 @@ class __TwigTemplate_956c8ea1a688535038a55912802f838437fa005404bb72261112be4d172
             echo twig_include($this->env, $context, "admin/_ban_form.html.twig");
             echo "
         </td>
-        <td class=\"px-6 py-4 whitespace-no-wrap\">
+        <td class=\"px-6 py-4\">
             <div class=\"d-inline-block\">
                 ";
             // line 20
@@ -149,22 +149,22 @@ class __TwigTemplate_956c8ea1a688535038a55912802f838437fa005404bb72261112be4d172
     {
         return new Source("{% for user in pagination %}
     <tr>
-        <td class=\"px-6 py-4 whitespace-no-wrap\">
+        <td class=\"px-6 py-4\">
             {{ user.id }}
         </td>
-        <td class=\"px-6 py-4 whitespace-no-wrap\">
+        <td class=\"px-6 py-4\">
             {{ user.name }}
         </td>
-        <td class=\"px-6 py-4 whitespace-no-wrap\">
+        <td class=\"px-6 py-4\">
             {{ user.email }}
         </td>
-        <td class=\"px-6 py-4 whitespace-no-wrap\">
+        <td class=\"px-6 py-4\">
             {{ include('admin/_role.html.twig') }}
         </td>
-        <td class=\"px-6 py-4 whitespace-no-wrap td_ban_{{ user.id }}\">
+        <td class=\"px-6 py-4 td_ban_{{ user.id }}\">
             {{ include('admin/_ban_form.html.twig') }}
         </td>
-        <td class=\"px-6 py-4 whitespace-no-wrap\">
+        <td class=\"px-6 py-4\">
             <div class=\"d-inline-block\">
                 {{ include('admin/_goto_edit.html.twig') }}
             </div>
@@ -173,6 +173,6 @@ class __TwigTemplate_956c8ea1a688535038a55912802f838437fa005404bb72261112be4d172
             </div>
         </td>
     </tr>
-{% endfor %}", "admin/_table.html.twig", "C:\\xampp\\htdocs\\files\\symfony_folders\\symfonyFacer\\templates\\admin\\_table.html.twig");
+{% endfor %}", "admin/_table.html.twig", "C:\\xampp\\htdocs\\files\\symfony_folders\\newSymfony\\templates\\admin\\_table.html.twig");
     }
 }

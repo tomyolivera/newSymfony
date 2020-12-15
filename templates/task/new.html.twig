@@ -3,13 +3,11 @@
 {% block title %}New Task{% endblock %}
 
 {% block body %}
-    <div class="container">
-        <p class="title">New Task</h1>
+    <p class="title">New Task</h1>
 
-        {{ include('task/_form.html.twig') }}
+    {{ include('task/_form.html.twig') }}
 
-        {{ include('task/return_to_list.html.twig') }}
-    </div>
+    {{ include('task/return_to_list.html.twig') }}
 {% endblock %}
 
 {% block javascripts %}

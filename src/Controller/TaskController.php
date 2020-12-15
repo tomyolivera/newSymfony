@@ -12,6 +12,8 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class TaskController extends AbstractController
 {
+    private const IS_NOT_XML = "This is not a XML request";
+
     /**
      * @Route("/task", name="task_index")
      */
@@ -75,7 +77,7 @@ class TaskController extends AbstractController
     }
 
     /**
-     * @Route("/task/{id}", name="task_delete", methods={"DELETE"})
+     * @Route("/task/{id}/delete", name="task_delete", methods={"DELETE"})
      */
     public function delete(Request $request, Task $task): Response
     {
@@ -87,6 +89,18 @@ class TaskController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($task);
             $entityManager->flush();
+        }
+
+        return $this->redirectToRoute('task_index');
+    }
+
+    /**
+     * @Route("/task/deleteAll", name="task_delete_all", methods={"DELETE"})
+     */
+    public function deleteAll(Request $request, TaskRepository $taskRepository): Response
+    {
+        if ($this->isCsrfTokenValid('delete', $request->request->get('_token'))) {
+            $taskRepository->deleteAll($this->getUser());
         }
 
         return $this->redirectToRoute('task_index');

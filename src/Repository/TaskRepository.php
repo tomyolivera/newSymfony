@@ -28,6 +28,18 @@ class TaskRepository extends ServiceEntityRepository
             ->getQuery()->getResult();
     }
 
+    public function deleteAll($id)
+    {
+        return $this->getEntityManager()
+                ->createQuery('
+                    DELETE
+                    FROM App:Task task
+                    WHERE task.user = :id
+                ')
+                ->setParameter(':id', $id)
+                ->getResult();
+    }
+
     // /**
     //  * @return Task[] Returns an array of Task objects
     //  */

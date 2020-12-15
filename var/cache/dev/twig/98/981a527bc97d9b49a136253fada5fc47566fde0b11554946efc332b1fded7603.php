@@ -80,6 +80,6 @@ class __TwigTemplate_bd2ad3f15a4d0a91ac7204e2997882ddf4053c0cda805aa7851a2afa458
     <a href=\"{{ path('admin_users_edit', {'id': user.id}) }}\" class=\"button-yellow\"><i>edit</i></a>
     {% else %}
     <button class=\"button-yellow not_enough_permissions\"><i>edit</i></button>
-{% endif %}", "admin/_goto_edit.html.twig", "C:\\xampp\\htdocs\\files\\symfony_folders\\symfonyFacer\\templates\\admin\\_goto_edit.html.twig");
+{% endif %}", "admin/_goto_edit.html.twig", "C:\\xampp\\htdocs\\files\\symfony_folders\\newSymfony\\templates\\admin\\_goto_edit.html.twig");
     }
 }

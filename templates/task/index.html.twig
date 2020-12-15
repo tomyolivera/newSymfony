@@ -9,9 +9,7 @@
         <a href="{{ path('task_new') }}" class="button-green">
             New Task
         </a>
-        {% if tasks %}
-            <button id="deleteAllTasks" class="mx-2 button-red d-flex align-center">Delete all <i>delete</i></button>
-        {% endif %}
+        {% include "task/_delete_all.html.twig" %}
     </div>
 
     <div class="flex flex-col">

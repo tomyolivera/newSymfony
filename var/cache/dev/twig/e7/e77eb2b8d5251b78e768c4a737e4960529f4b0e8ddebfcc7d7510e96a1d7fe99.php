@@ -137,6 +137,6 @@ class __TwigTemplate_f58b924d0c67dc57f671dbedbb31df2c8b20e568dd180ac1ccdacd80aa5
         <a href=\"{{ path('admin_users') }}\">Users Control</a>
     {% endif %}
 
-{% endblock %}", "admin/index.html.twig", "C:\\xampp\\htdocs\\files\\symfony_folders\\symfonyFacer\\templates\\admin\\index.html.twig");
+{% endblock %}", "admin/index.html.twig", "C:\\xampp\\htdocs\\files\\symfony_folders\\newSymfony\\templates\\admin\\index.html.twig");
     }
 }

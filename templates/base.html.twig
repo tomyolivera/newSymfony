@@ -13,14 +13,19 @@
       <!-- Materialize Icons -->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+      {# CSS #}
       <link rel="stylesheet" href="{{asset('css/style.css')}}">
+
+      {# VUE #}
+      <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.js"></script>
     {% endblock %}
     
   </head>
-  <body class="bg-gray-300">
+  <body class="bg-gray-400">
     
     <div class="d-flex">
-        {% include "sideBar.html.twig" %}
+      {% include "sideBar.html.twig" %}
 
       <div class="w-100">
         {% include "header.html.twig" %}
@@ -28,7 +33,9 @@
         <div class="content mt-3" style="overflow:auto;">
           {% block body %}{% endblock %}
         <div>
+
       </div>
+
     </div>
 
 

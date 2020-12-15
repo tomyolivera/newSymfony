@@ -1,0 +1,19 @@
+<div>
+    <p>Your permissions are: </p>
+    
+    {% set roles = ['BASIC', 'BAN', 'EDIT', 'DELETE'] %}
+
+    {% if app.user.roles[0] == 'ROLE_USER' %}
+        {{ roles[0] }}
+
+        {% elseif app.user.roles[0] == 'ROLE_MOD' %}
+        {{ roles[0] }}
+
+        {% elseif app.user.roles[0] == 'ROLE_ADMIN' %}
+        {{ roles[0] }} - {{ roles[1] }} - {{ roles[2] }}
+
+        {% else %}
+        {{ roles[0] }} - {{ roles[1] }} - {{ roles[2] }} - {{ roles[3] }}
+        
+    {% endif %}
+</div>

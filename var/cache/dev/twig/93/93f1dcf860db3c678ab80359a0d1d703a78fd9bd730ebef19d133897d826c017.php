@@ -49,8 +49,7 @@ class __TwigTemplate_ee13bc794f0fc5a70f8d3748f0f20548786bbb0cd6486c15feeda3982e4
         echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("delete" . twig_get_attribute($this->env, $this->source, (isset($context["task"]) || array_key_exists("task", $context) ? $context["task"] : (function () { throw new RuntimeError('Variable "task" does not exist.', 3, $this->source); })()), "id", [], "any", false, false, false, 3))), "html", null, true);
         echo "\">
     <button class=\"button-red\"><i>delete</i></button>
-</form>
-";
+</form>";
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
 
@@ -80,7 +79,6 @@ class __TwigTemplate_ee13bc794f0fc5a70f8d3748f0f20548786bbb0cd6486c15feeda3982e4
     <input type=\"hidden\" name=\"_method\" value=\"DELETE\">
     <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ task.id) }}\">
     <button class=\"button-red\"><i>delete</i></button>
-</form>
-", "task/_delete_form.html.twig", "C:\\xampp\\htdocs\\files\\symfony_folders\\symfonyFacer\\templates\\task\\_delete_form.html.twig");
+</form>", "task/_delete_form.html.twig", "C:\\xampp\\htdocs\\files\\symfony_folders\\newSymfony\\templates\\task\\_delete_form.html.twig");
     }
 }

@@ -30,7 +30,7 @@ class RegisterController extends AbstractController
             $entityManager->persist($user);
             $entityManager->flush();
             $this->addFlash('success', User::SUCCESS_REGISTER);
-            return $this->redirectToRoute("register");
+            return $this->redirectToRoute("app_login");
         }
 
         $errors = $validator->validate($user);

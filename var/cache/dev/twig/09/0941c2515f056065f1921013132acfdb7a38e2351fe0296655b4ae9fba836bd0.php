@@ -125,6 +125,6 @@ class __TwigTemplate_3ca6ffc0bdacb3e19ef1c961cf37212051c11ecd7c7364c27467b0aa1ce
     {{ form_rest(form.roles) }}
 </div>
 
-{{ form_end(form) }}", "admin/_form.html.twig", "C:\\xampp\\htdocs\\files\\symfony_folders\\symfonyFacer\\templates\\admin\\_form.html.twig");
+{{ form_end(form) }}", "admin/_form.html.twig", "C:\\xampp\\htdocs\\files\\symfony_folders\\newSymfony\\templates\\admin\\_form.html.twig");
     }
 }

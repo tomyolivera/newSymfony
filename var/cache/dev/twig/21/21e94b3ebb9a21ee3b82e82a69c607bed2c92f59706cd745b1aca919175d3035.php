@@ -93,9 +93,16 @@ class __TwigTemplate_b2487839698a6eaa6e4dbec7aef85ed80fa586af7b377959a28081cb3dc
         echo "
     </div>
 
+    <div class=\"my-3\">
+        <span>Do you have an account? <a class=\"text-blue\" href=\"";
+        // line 27
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
+        echo "\">Log In</a> </span>
+    </div>
+
 ";
-        // line 26
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 26, $this->source); })()), 'form_end');
+        // line 30
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 30, $this->source); })()), 'form_end');
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
 
@@ -116,7 +123,7 @@ class __TwigTemplate_b2487839698a6eaa6e4dbec7aef85ed80fa586af7b377959a28081cb3dc
 
     public function getDebugInfo()
     {
-        return array (  98 => 26,  92 => 23,  87 => 21,  82 => 19,  75 => 15,  70 => 13,  65 => 11,  58 => 7,  53 => 5,  48 => 3,  43 => 1,);
+        return array (  105 => 30,  99 => 27,  92 => 23,  87 => 21,  82 => 19,  75 => 15,  70 => 13,  65 => 11,  58 => 7,  53 => 5,  48 => 3,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -146,6 +153,10 @@ class __TwigTemplate_b2487839698a6eaa6e4dbec7aef85ed80fa586af7b377959a28081cb3dc
         {{ form_widget(form.password) }}
     </div>
 
-{{ form_end(form) }}", "register/_form.html.twig", "C:\\xampp\\htdocs\\files\\symfony_folders\\symfonyFacer\\templates\\register\\_form.html.twig");
+    <div class=\"my-3\">
+        <span>Do you have an account? <a class=\"text-blue\" href=\"{{ path('app_login') }}\">Log In</a> </span>
+    </div>
+
+{{ form_end(form) }}", "register/_form.html.twig", "C:\\xampp\\htdocs\\files\\symfony_folders\\newSymfony\\templates\\register\\_form.html.twig");
     }
 }

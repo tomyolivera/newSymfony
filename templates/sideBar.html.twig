@@ -1,5 +1,5 @@
-<div class="sidebar-container text-light bg-dark shadow">
-    <div class="logo bg-info">
+<div class="sidebar-container text-light bg-gray-800 shadow-2xl">
+    <div class="logo bg-gray-800">
         <h4 class="h4 mt-2">FACER</h4>
     </div>
     <div class="menu">
@@ -9,16 +9,18 @@
                 <p>For more info, click <a class="text-info" href="#">here</a></p>
             </div>
            {% else %}        
-            <a href="{{path('index')}}" class="d-block p-3 d-flex align-center text-yellow-300"><i>home</i> Home</a>
-            <a href="{{path('task_index')}}" class="d-block p-3 d-flex align-center text-green-400"><i>work</i> Tasks</a>
-            <a href="#" class="d-block p-3 d-flex align-center text-pink-600"><i>chat</i> Chats</a>
+                <a href="{{path('index')}}" class="d-block p-3 d-flex align-center text-yellow-500"><i>home</i> Home</a>
+                <a href="{{path('task_index')}}" class="d-block p-3 d-flex align-center text-green-400"><i>work</i> Tasks</a>
+                <a href="#" class="d-block p-3 d-flex align-center text-pink-600"><i>chat</i> Chats</a>
             {% if is_granted('IS_AUTHENTICATED_FULLY') %}
                 <a href="{{path('profile')}}" class="d-block p-3 d-flex align-center text-blue-600"><i>person</i> Profile</a>
             {% if is_granted('ROLE_ADMIN') %}
                 <a href="{{path('admin')}}" class="d-block p-3 d-flex align-center text-yellow-600"><i>admin_panel_settings</i> Admin</a>
             {% endif %}
                 <a href="{{path('app_logout')}}" class="d-block p-3 d-flex align-center text-red-600"><i>logout</i> Logout</a>
-                {% else %} 
+            {% else %}
+                <a href="{{path('app_login')}}" class="d-block p-3 d-flex align-center text-green-400"><i>login</i> Login</a>
+                <a href="{{path('register')}}" class="d-block p-3 d-flex align-center text-blue-500"><i>person_add</i> Register</a>
             {% endif %}
             
         {% endif %}

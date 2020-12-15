@@ -92,6 +92,6 @@ class __TwigTemplate_bd4698ec855bedcb32986c13d59107e21c1eacc730aa196c760e3eebc83
     </form>
     {% else %}
         <button class=\"button-red not_enough_permissions\"><i>delete</i></button>
-{% endif %}", "admin/_delete_form.html.twig", "C:\\xampp\\htdocs\\files\\symfony_folders\\symfonyFacer\\templates\\admin\\_delete_form.html.twig");
+{% endif %}", "admin/_delete_form.html.twig", "C:\\xampp\\htdocs\\files\\symfony_folders\\newSymfony\\templates\\admin\\_delete_form.html.twig");
     }
 }

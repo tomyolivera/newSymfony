@@ -1,0 +1,5 @@
+<form class="d-inline-block" method="post" action="{{ path('task_delete_all') }}" onsubmit="return confirm('Are you sure you want to delete all tasks?');">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="hidden" name="_token" value="{{ csrf_token('delete') }}">
+    <button class="mx-3 button-red d-flex align-center">Delete all<i>delete</i></button>
+</form>

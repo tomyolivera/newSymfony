@@ -60,11 +60,22 @@
                     </div>
                 </div>
 
+                {# Email #}
+                <p class="title">Role </p>
+                <div class="bg-gray-500 p-5 mb-5 rounded d-flex justify-content-between">
+                    <div>
+                        <span class="title">Role: </span>     
+                        <span class="title"> {% set role = dat.roles[0]|split('_') %} {{role[1]}} </span>
+                    </div>
+                    
+                    {% include "profile/_permissions.html.twig" %}
+                </div>
+
                 {# Password #}
                 <p class="title">Password </p>
                 <div class="bg-gray-500 p-5 mb-5 rounded d-flex justify-content-between">
                     <div>
-                        <span class="title">Password: ***********</span>
+                        <span class="title">Password: **********</span>
                     </div>
 
                     <div>
@@ -80,7 +91,7 @@
                     </div>
 
                     <div>
-                        <button class="button-red d-flex ali">Delete account<i>delete</i></button>
+                        {% include "profile/_delete.html.twig" %}
                     </div>
                 </div>
 

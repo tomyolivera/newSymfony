@@ -68,6 +68,6 @@ class __TwigTemplate_de5d2e9a4aaa305fb825415d002a16b04bd3e125fb2a4b6c3b34d46350b
 
     public function getSourceContext()
     {
-        return new Source("<a href=\"{{ path('admin_users') }}\" class=\"button-purple\">Back to list</a>", "admin/_return_to_list.html.twig", "C:\\xampp\\htdocs\\files\\symfony_folders\\symfonyFacer\\templates\\admin\\_return_to_list.html.twig");
+        return new Source("<a href=\"{{ path('admin_users') }}\" class=\"button-purple\">Back to list</a>", "admin/_return_to_list.html.twig", "C:\\xampp\\htdocs\\files\\symfony_folders\\newSymfony\\templates\\admin\\_return_to_list.html.twig");
     }
 }

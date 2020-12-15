@@ -146,6 +146,6 @@ class __TwigTemplate_9b29247524c435b9e206ce49ecd9c934e4f9801afbda37edba175842e1e
             <span class=\"text-red-500 d-flex justify-content-between\"> {% set role = rol|split('_') %} {{role[1]}} <i>error</i> </span>
         {% endif %}
     </div>
-{% endfor %}", "admin/_role.html.twig", "C:\\xampp\\htdocs\\files\\symfony_folders\\symfonyFacer\\templates\\admin\\_role.html.twig");
+{% endfor %}", "admin/_role.html.twig", "C:\\xampp\\htdocs\\files\\symfony_folders\\newSymfony\\templates\\admin\\_role.html.twig");
     }
 }

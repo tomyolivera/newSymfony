@@ -86,48 +86,40 @@ class __TwigTemplate_6967776303b52a98f104eca71bf29d8ebc26321b28a0f605b505cce2f1c
 
         // line 6
         echo "
-    <div class=\"container-fluid mt-3\">
-        <div class=\"row\">
-            <div class=\"col-sm-12 col-md-4\">
-                <p>Register and get access to your own tasks!</p>
-            </div>
-            <div class=\"col-sm-12 col-md-8 cuadro\">
-                ";
-        // line 13
+    <div class=\"row\">
+        <div class=\"col-sm-12 col-md-4\">
+            <p>Register and get access to your own tasks!</p>
+        </div>
+        <div class=\"col-sm-12 col-md-8 cuadro\">
+            ";
+        // line 12
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 13, $this->source); })()), "flashes", [0 => "success"], "method", false, false, false, 13));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 12, $this->source); })()), "flashes", [0 => "success"], "method", false, false, false, 12));
         foreach ($context['_seq'] as $context["_key"] => $context["msg"]) {
+            // line 13
+            echo "                <div class=\"alert alert-success\">
+                    ";
             // line 14
-            echo "                    <div class=\"alert alert-success\">
-                        ";
-            // line 15
             echo twig_escape_filter($this->env, $context["msg"], "html", null, true);
             echo "
-                    </div>
-                ";
+                </div>
+            ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['msg'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 18
+        // line 17
         echo "
-                <p class=\"title mb-4\">Register</p>
-                <p class=\"text-gray-800 mt-3\">Complete with your data:</p>
+            <p class=\"title mb-4\">Register</p>
+            <p class=\"text-gray-800 mt-3\">Complete with your data:</p>
 
+            ";
+        // line 22
+        echo "            <div class=\"mt-3\">
                 ";
         // line 23
-        echo "                <div class=\"mt-3\">
-                    ";
-        // line 24
         echo twig_include($this->env, $context, "register/_form.html.twig");
         echo "
-                    <div class=\"my-3\">
-                        <span>Do you have an account? <a class=\"text-blue\" href=\"";
-        // line 26
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
-        echo "\">Log In</a> </span>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -153,7 +145,7 @@ class __TwigTemplate_6967776303b52a98f104eca71bf29d8ebc26321b28a0f605b505cce2f1c
 
     public function getDebugInfo()
     {
-        return array (  127 => 26,  122 => 24,  119 => 23,  113 => 18,  104 => 15,  101 => 14,  97 => 13,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  121 => 23,  118 => 22,  112 => 17,  103 => 14,  100 => 13,  96 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -164,32 +156,27 @@ class __TwigTemplate_6967776303b52a98f104eca71bf29d8ebc26321b28a0f605b505cce2f1c
 
 {% block body %}
 
-    <div class=\"container-fluid mt-3\">
-        <div class=\"row\">
-            <div class=\"col-sm-12 col-md-4\">
-                <p>Register and get access to your own tasks!</p>
-            </div>
-            <div class=\"col-sm-12 col-md-8 cuadro\">
-                {% for msg in app.flashes('success') %}
-                    <div class=\"alert alert-success\">
-                        {{msg}}
-                    </div>
-                {% endfor %}
-
-                <p class=\"title mb-4\">Register</p>
-                <p class=\"text-gray-800 mt-3\">Complete with your data:</p>
-
-                {# Form #}
-                <div class=\"mt-3\">
-                    {{ include('register/_form.html.twig') }}
-                    <div class=\"my-3\">
-                        <span>Do you have an account? <a class=\"text-blue\" href=\"{{ path('app_login') }}\">Log In</a> </span>
-                    </div>
+    <div class=\"row\">
+        <div class=\"col-sm-12 col-md-4\">
+            <p>Register and get access to your own tasks!</p>
+        </div>
+        <div class=\"col-sm-12 col-md-8 cuadro\">
+            {% for msg in app.flashes('success') %}
+                <div class=\"alert alert-success\">
+                    {{msg}}
                 </div>
+            {% endfor %}
+
+            <p class=\"title mb-4\">Register</p>
+            <p class=\"text-gray-800 mt-3\">Complete with your data:</p>
+
+            {# Form #}
+            <div class=\"mt-3\">
+                {{ include('register/_form.html.twig') }}
             </div>
         </div>
     </div>
 
-{% endblock %}", "register/index.html.twig", "C:\\xampp\\htdocs\\files\\symfony_folders\\symfonyFacer\\templates\\register\\index.html.twig");
+{% endblock %}", "register/index.html.twig", "C:\\xampp\\htdocs\\files\\symfony_folders\\newSymfony\\templates\\register\\index.html.twig");
     }
 }
