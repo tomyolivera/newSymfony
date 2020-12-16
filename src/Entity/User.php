@@ -14,6 +14,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  */
 class User implements UserInterface
 {
+    public const PASSWORDS_NOT_MATCH = 'The passwords don\'t match';
     public const SUCCESS_REGISTER = 'Account created succesfully!';
     
     /**

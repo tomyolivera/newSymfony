@@ -27,6 +27,7 @@ class __TwigTemplate_9d9e01389c6b4454498fd7d3fe60964cbae824ab78a7f5b10e271143d75
         $this->blocks = [
             'title' => [$this, 'block_title'],
             'body' => [$this, 'block_body'],
+            'javascripts' => [$this, 'block_javascripts'],
         ];
     }
 
@@ -120,14 +121,18 @@ class __TwigTemplate_9d9e01389c6b4454498fd7d3fe60964cbae824ab78a7f5b10e271143d75
                     <input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"input-customize\" required>
                 </div>
 
+                <div>
+                    <button type=\"button\" id=\"button_show\" class=\"button-blue\">Show / Hide password</button>
+                </div>
+
                 <input type=\"hidden\" name=\"_csrf_token\" value=\"";
-        // line 28
+        // line 32
         echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken("authenticate"), "html", null, true);
         echo "\">
  
                 <div class=\"mt-3\">
                     <span>Don't you have an account yet? <a class=\"text-blue\" href=\"";
-        // line 31
+        // line 35
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("register");
         echo "\">Create account</a> </span>
                 </div>
@@ -139,6 +144,40 @@ class __TwigTemplate_9d9e01389c6b4454498fd7d3fe60964cbae824ab78a7f5b10e271143d75
         </div>
     </div>
 </div>
+";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    // line 47
+    public function block_javascripts($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
+
+        // line 48
+        echo "    ";
+        $this->displayParentBlock("javascripts", $context, $blocks);
+        echo "
+
+    <script>
+        
+        let button_show = \$(\"#button_show\");
+        let inputPassword = document.getElementById(\"inputPassword\");
+
+        button_show.click(() => {
+            showPassword(inputPassword);
+        });
+
+    </script>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -160,7 +199,7 @@ class __TwigTemplate_9d9e01389c6b4454498fd7d3fe60964cbae824ab78a7f5b10e271143d75
 
     public function getDebugInfo()
     {
-        return array (  131 => 31,  125 => 28,  115 => 21,  108 => 16,  102 => 14,  100 => 13,  93 => 9,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  167 => 48,  157 => 47,  136 => 35,  130 => 32,  116 => 21,  109 => 16,  103 => 14,  101 => 13,  94 => 9,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -192,6 +231,10 @@ class __TwigTemplate_9d9e01389c6b4454498fd7d3fe60964cbae824ab78a7f5b10e271143d75
                     <input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"input-customize\" required>
                 </div>
 
+                <div>
+                    <button type=\"button\" id=\"button_show\" class=\"button-blue\">Show / Hide password</button>
+                </div>
+
                 <input type=\"hidden\" name=\"_csrf_token\" value=\"{{ csrf_token('authenticate') }}\">
  
                 <div class=\"mt-3\">
@@ -206,6 +249,20 @@ class __TwigTemplate_9d9e01389c6b4454498fd7d3fe60964cbae824ab78a7f5b10e271143d75
     </div>
 </div>
 {% endblock %}
-", "security/login.html.twig", "C:\\xampp\\htdocs\\files\\symfony_folders\\newSymfony\\templates\\security\\login.html.twig");
+
+{% block javascripts %}
+    {{ parent() }}
+
+    <script>
+        
+        let button_show = \$(\"#button_show\");
+        let inputPassword = document.getElementById(\"inputPassword\");
+
+        button_show.click(() => {
+            showPassword(inputPassword);
+        });
+
+    </script>
+{% endblock %}", "security/login.html.twig", "C:\\xampp\\htdocs\\files\\symfony_folders\\newSymfony\\templates\\security\\login.html.twig");
     }
 }

@@ -1,28 +1,33 @@
 <div id="app">
 
-    <button type="button" class="button-red d-flex aligin-center" data-toggle="modal" data-target="#deleteAccount">Delete account <i>delete</i></button>
+    <button type="button" class="btn btn-outline-danger d-flex aligin-center" data-toggle="modal" data-target="#deleteAccount">Delete account <i>delete</i></button>
     
     <!-- Modal -->
-    <div class="modal fade" id="deleteAccount" aria-hidden="true">
+    <div class="modal fade text-dark" id="deleteAccount" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <p class="modal-title h4">Delete account</p>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" @click="reWriteName = ''">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
                     <form method="post" action="{{ path('profile_delete', {'id': app.user.id}) }}">
-                        <p class="h5">Rewrite your name to complete this action</p><br>
+                        <p class="h5">Rewrite your data to complete this action</p><br>
 
                         <input type="hidden" v-model="name" id="name" value="{{ app.user.name }}">
                         <input type="hidden" name="_method" value="DELETE">
                         <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ app.user.id) }}">
 
-                        <input type="text" class="form-control" placeholder="{{ app.user.name }}" v-model="reWriteName" @keyup="checkName"><br>
+                        <label for="inputName">Name</label>
+                        <input type="text" class="form-control" id="inputName" placeholder="{{ app.user.name }}" v-model="reWriteName" @keyup="checkName"><br>
+
+                        <label for="inputPassword">Password</label>
+                        <input type="password" class="form-control" id="inputPassword" name="password"><br>
+
                         <div class="d-flex justify-content-between">
-                            <button type="submit" class="button-red d-flex aligin-center" :disabled="disabled" onclick="return confirm('Are you really sure?')">Delete account <i>delete</i></button>
+                            <button type="submit" class="btn btn-outline-danger d-flex aligin-center" :disabled="disabled" onclick="return confirm('Are you really sure?')">Delete account <i>delete</i></button>
                             <button type="button" class="mx-3 button-gray" data-dismiss="modal" @click="reWriteName = ''">Cancel</button>
                         </div>
                     </form>
@@ -47,11 +52,12 @@
         },
         methods: {
             checkName(){
-                this.disabled = this.name !== this.reWriteName;
+                this.disabled = this.name != this.reWriteName;
             }
         },
         created(){
             this.name = $("#name").val()
+            this.checkName();
         }
     })
 

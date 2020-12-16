@@ -27,6 +27,7 @@ class __TwigTemplate_6967776303b52a98f104eca71bf29d8ebc26321b28a0f605b505cce2f1c
         $this->blocks = [
             'title' => [$this, 'block_title'],
             'body' => [$this, 'block_body'],
+            'javascripts' => [$this, 'block_javascripts'],
         ];
     }
 
@@ -109,7 +110,7 @@ class __TwigTemplate_6967776303b52a98f104eca71bf29d8ebc26321b28a0f605b505cce2f1c
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['msg'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 17
-        echo "
+        echo "            
             <p class=\"title mb-4\">Register</p>
             <p class=\"text-gray-800 mt-3\">Complete with your data:</p>
 
@@ -133,6 +134,46 @@ class __TwigTemplate_6967776303b52a98f104eca71bf29d8ebc26321b28a0f605b505cce2f1c
 
     }
 
+    // line 31
+    public function block_javascripts($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
+
+        // line 32
+        echo "
+";
+        // line 33
+        $this->displayParentBlock("javascripts", $context, $blocks);
+        echo "
+
+<script>
+
+    let button_show = \$(\"#button_show\");
+    let inputPassword = document.getElementById(\"user_password\");
+    let rePassword = document.getElementById(\"rePassword\");
+
+    button_show.click(() => {
+        showPassword(inputPassword);
+        showPassword(rePassword);
+    });
+
+
+</script>
+
+";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
     public function getTemplateName()
     {
         return "register/index.html.twig";
@@ -145,7 +186,7 @@ class __TwigTemplate_6967776303b52a98f104eca71bf29d8ebc26321b28a0f605b505cce2f1c
 
     public function getDebugInfo()
     {
-        return array (  121 => 23,  118 => 22,  112 => 17,  103 => 14,  100 => 13,  96 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  151 => 33,  148 => 32,  138 => 31,  122 => 23,  119 => 22,  113 => 17,  104 => 14,  101 => 13,  97 => 12,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -166,7 +207,7 @@ class __TwigTemplate_6967776303b52a98f104eca71bf29d8ebc26321b28a0f605b505cce2f1c
                     {{msg}}
                 </div>
             {% endfor %}
-
+            
             <p class=\"title mb-4\">Register</p>
             <p class=\"text-gray-800 mt-3\">Complete with your data:</p>
 
@@ -176,6 +217,27 @@ class __TwigTemplate_6967776303b52a98f104eca71bf29d8ebc26321b28a0f605b505cce2f1c
             </div>
         </div>
     </div>
+
+{% endblock %}
+
+
+{% block javascripts %}
+
+{{ parent() }}
+
+<script>
+
+    let button_show = \$(\"#button_show\");
+    let inputPassword = document.getElementById(\"user_password\");
+    let rePassword = document.getElementById(\"rePassword\");
+
+    button_show.click(() => {
+        showPassword(inputPassword);
+        showPassword(rePassword);
+    });
+
+
+</script>
 
 {% endblock %}", "register/index.html.twig", "C:\\xampp\\htdocs\\files\\symfony_folders\\newSymfony\\templates\\register\\index.html.twig");
     }

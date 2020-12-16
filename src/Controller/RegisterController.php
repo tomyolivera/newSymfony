@@ -20,6 +20,8 @@ class RegisterController extends AbstractController
         if($this->getUser()){
             return $this->redirectToRoute('index');
         }
+        
+        $errors = [];
 
         $user = new User();
         $form = $this->createForm(UserType::class, $user);
@@ -29,7 +31,7 @@ class RegisterController extends AbstractController
             $user->setPassword($passwordEncoder->encodePassword($user, $form['password']->getData()));
             $entityManager->persist($user);
             $entityManager->flush();
-            $this->addFlash('success', User::SUCCESS_REGISTER);
+            // $this->addFlash('success', User::SUCCESS_REGISTER);
             return $this->redirectToRoute("app_login");
         }
 

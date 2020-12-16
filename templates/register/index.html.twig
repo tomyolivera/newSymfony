@@ -14,7 +14,7 @@
                     {{msg}}
                 </div>
             {% endfor %}
-
+            
             <p class="title mb-4">Register</p>
             <p class="text-gray-800 mt-3">Complete with your data:</p>
 
@@ -24,5 +24,26 @@
             </div>
         </div>
     </div>
+
+{% endblock %}
+
+
+{% block javascripts %}
+
+{{ parent() }}
+
+<script>
+
+    let button_show = $("#button_show");
+    let inputPassword = document.getElementById("user_password");
+    let rePassword = document.getElementById("rePassword");
+
+    button_show.click(() => {
+        showPassword(inputPassword);
+        showPassword(rePassword);
+    });
+
+
+</script>
 
 {% endblock %}

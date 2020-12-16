@@ -21,6 +21,22 @@
   padding-right: 2rem;
 }
 
+.body{
+  background-image: linear-gradient(to bottom, rgb(211, 211, 211), rgb(112, 112, 112));
+}
+
+.header{
+  background-image: linear-gradient(to right,  rgb(16, 27, 122), rgb(61, 8, 8));
+}
+
+.sideBar{
+  background-image: linear-gradient(to bottom, rgb(73, 73, 73), rgb(22, 22, 22));
+}
+
+thead{
+  background-image: linear-gradient(to right,rgb(50, 50, 65), rgb(22, 22, 22));
+}
+
 .preloader {
     z-index:9999;
     position:fixed;

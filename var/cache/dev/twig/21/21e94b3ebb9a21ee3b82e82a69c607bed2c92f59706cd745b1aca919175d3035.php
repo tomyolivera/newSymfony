@@ -91,18 +91,27 @@ class __TwigTemplate_b2487839698a6eaa6e4dbec7aef85ed80fa586af7b377959a28081cb3dc
         // line 23
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 23, $this->source); })()), "password", [], "any", false, false, false, 23), 'widget');
         echo "
+
+        ";
+        // line 27
+        echo "    </div>
+
+
+
+    <div>
+        <button type=\"button\" id=\"button_show\" class=\"button-blue\">Show / Hide password</button>
     </div>
 
     <div class=\"my-3\">
         <span>Do you have an account? <a class=\"text-blue\" href=\"";
-        // line 27
+        // line 36
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
         echo "\">Log In</a> </span>
     </div>
 
 ";
-        // line 30
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 30, $this->source); })()), 'form_end');
+        // line 39
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 39, $this->source); })()), 'form_end');
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
 
@@ -123,7 +132,7 @@ class __TwigTemplate_b2487839698a6eaa6e4dbec7aef85ed80fa586af7b377959a28081cb3dc
 
     public function getDebugInfo()
     {
-        return array (  105 => 30,  99 => 27,  92 => 23,  87 => 21,  82 => 19,  75 => 15,  70 => 13,  65 => 11,  58 => 7,  53 => 5,  48 => 3,  43 => 1,);
+        return array (  114 => 39,  108 => 36,  97 => 27,  92 => 23,  87 => 21,  82 => 19,  75 => 15,  70 => 13,  65 => 11,  58 => 7,  53 => 5,  48 => 3,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -151,6 +160,15 @@ class __TwigTemplate_b2487839698a6eaa6e4dbec7aef85ed80fa586af7b377959a28081cb3dc
             {{ form_errors(form.password) }}
         </div>
         {{ form_widget(form.password) }}
+
+        {# <label for\"rePassword\">Repeat password</label>
+        <input type=\"password\" class=\"input-customize\" name=\"rePassword\" id=\"rePassword\"><br> #}
+    </div>
+
+
+
+    <div>
+        <button type=\"button\" id=\"button_show\" class=\"button-blue\">Show / Hide password</button>
     </div>
 
     <div class=\"my-3\">

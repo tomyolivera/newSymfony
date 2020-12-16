@@ -15,14 +15,14 @@ class TaskType extends AbstractType
     {
         $builder
             ->add('name', null, [
-                'attr' => ['class' => 'input-customize']
+                'attr' => ['class' => 'input-customize', '@keyup' => 'checkField', '@keyup.enter' => 'disabled = true']
             ])
             ->add('description', null, [
                 'attr' => ['class' => 'input-customize']
             ])
-            ->add('date_for', DateTYpe::class)
+            ->add('date_for', DateType::class)
             ->add('save', SubmitType::class, [
-                'attr' => ['class' => 'button-green btn-block my-3']
+                'attr' => ['class' => 'button-green btn-block my-3', ':disabled' => "disabled", '@click' => 'disableBtn']
             ])
         ;
     }

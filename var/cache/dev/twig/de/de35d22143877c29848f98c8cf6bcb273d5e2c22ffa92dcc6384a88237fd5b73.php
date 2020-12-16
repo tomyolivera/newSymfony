@@ -42,15 +42,15 @@ class __TwigTemplate_66345d33fe901fb29f30062aae18700c5d9c5c01685266b7b48f946fb48
         // line 1
         echo "<div id=\"app\">
 
-    <button type=\"button\" class=\"button-red d-flex aligin-center\" data-toggle=\"modal\" data-target=\"#deleteAccount\">Delete account <i>delete</i></button>
+    <button type=\"button\" class=\"btn btn-outline-danger d-flex aligin-center\" data-toggle=\"modal\" data-target=\"#deleteAccount\">Delete account <i>delete</i></button>
     
     <!-- Modal -->
-    <div class=\"modal fade\" id=\"deleteAccount\" aria-hidden=\"true\">
+    <div class=\"modal fade text-dark\" id=\"deleteAccount\" aria-hidden=\"true\">
         <div class=\"modal-dialog\">
             <div class=\"modal-content\">
                 <div class=\"modal-header\">
                     <p class=\"modal-title h4\">Delete account</p>
-                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
+                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\" @click=\"reWriteName = ''\">
                         <span aria-hidden=\"true\">&times;</span>
                     </button>
                 </div>
@@ -59,7 +59,7 @@ class __TwigTemplate_66345d33fe901fb29f30062aae18700c5d9c5c01685266b7b48f946fb48
         // line 16
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("profile_delete", ["id" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 16, $this->source); })()), "user", [], "any", false, false, false, 16), "id", [], "any", false, false, false, 16)]), "html", null, true);
         echo "\">
-                        <p class=\"h5\">Rewrite your name to complete this action</p><br>
+                        <p class=\"h5\">Rewrite your data to complete this action</p><br>
 
                         <input type=\"hidden\" v-model=\"name\" id=\"name\" value=\"";
         // line 19
@@ -71,12 +71,17 @@ class __TwigTemplate_66345d33fe901fb29f30062aae18700c5d9c5c01685266b7b48f946fb48
         echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("delete" . twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 21, $this->source); })()), "user", [], "any", false, false, false, 21), "id", [], "any", false, false, false, 21))), "html", null, true);
         echo "\">
 
-                        <input type=\"text\" class=\"form-control\" placeholder=\"";
-        // line 23
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 23, $this->source); })()), "user", [], "any", false, false, false, 23), "name", [], "any", false, false, false, 23), "html", null, true);
+                        <label for=\"inputName\">Name</label>
+                        <input type=\"text\" class=\"form-control\" id=\"inputName\" placeholder=\"";
+        // line 24
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 24, $this->source); })()), "user", [], "any", false, false, false, 24), "name", [], "any", false, false, false, 24), "html", null, true);
         echo "\" v-model=\"reWriteName\" @keyup=\"checkName\"><br>
+
+                        <label for=\"inputPassword\">Password</label>
+                        <input type=\"password\" class=\"form-control\" id=\"inputPassword\" name=\"password\"><br>
+
                         <div class=\"d-flex justify-content-between\">
-                            <button type=\"submit\" class=\"button-red d-flex aligin-center\" :disabled=\"disabled\" onclick=\"return confirm('Are you really sure?')\">Delete account <i>delete</i></button>
+                            <button type=\"submit\" class=\"btn btn-outline-danger d-flex aligin-center\" :disabled=\"disabled\" onclick=\"return confirm('Are you really sure?')\">Delete account <i>delete</i></button>
                             <button type=\"button\" class=\"mx-3 button-gray\" data-dismiss=\"modal\" @click=\"reWriteName = ''\">Cancel</button>
                         </div>
                     </form>
@@ -101,11 +106,12 @@ class __TwigTemplate_66345d33fe901fb29f30062aae18700c5d9c5c01685266b7b48f946fb48
         },
         methods: {
             checkName(){
-                this.disabled = this.name !== this.reWriteName;
+                this.disabled = this.name != this.reWriteName;
             }
         },
         created(){
             this.name = \$(\"#name\").val()
+            this.checkName();
         }
     })
 
@@ -130,36 +136,41 @@ class __TwigTemplate_66345d33fe901fb29f30062aae18700c5d9c5c01685266b7b48f946fb48
 
     public function getDebugInfo()
     {
-        return array (  76 => 23,  71 => 21,  66 => 19,  60 => 16,  43 => 1,);
+        return array (  77 => 24,  71 => 21,  66 => 19,  60 => 16,  43 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("<div id=\"app\">
 
-    <button type=\"button\" class=\"button-red d-flex aligin-center\" data-toggle=\"modal\" data-target=\"#deleteAccount\">Delete account <i>delete</i></button>
+    <button type=\"button\" class=\"btn btn-outline-danger d-flex aligin-center\" data-toggle=\"modal\" data-target=\"#deleteAccount\">Delete account <i>delete</i></button>
     
     <!-- Modal -->
-    <div class=\"modal fade\" id=\"deleteAccount\" aria-hidden=\"true\">
+    <div class=\"modal fade text-dark\" id=\"deleteAccount\" aria-hidden=\"true\">
         <div class=\"modal-dialog\">
             <div class=\"modal-content\">
                 <div class=\"modal-header\">
                     <p class=\"modal-title h4\">Delete account</p>
-                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">
+                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\" @click=\"reWriteName = ''\">
                         <span aria-hidden=\"true\">&times;</span>
                     </button>
                 </div>
                 <div class=\"modal-body\">
                     <form method=\"post\" action=\"{{ path('profile_delete', {'id': app.user.id}) }}\">
-                        <p class=\"h5\">Rewrite your name to complete this action</p><br>
+                        <p class=\"h5\">Rewrite your data to complete this action</p><br>
 
                         <input type=\"hidden\" v-model=\"name\" id=\"name\" value=\"{{ app.user.name }}\">
                         <input type=\"hidden\" name=\"_method\" value=\"DELETE\">
                         <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ app.user.id) }}\">
 
-                        <input type=\"text\" class=\"form-control\" placeholder=\"{{ app.user.name }}\" v-model=\"reWriteName\" @keyup=\"checkName\"><br>
+                        <label for=\"inputName\">Name</label>
+                        <input type=\"text\" class=\"form-control\" id=\"inputName\" placeholder=\"{{ app.user.name }}\" v-model=\"reWriteName\" @keyup=\"checkName\"><br>
+
+                        <label for=\"inputPassword\">Password</label>
+                        <input type=\"password\" class=\"form-control\" id=\"inputPassword\" name=\"password\"><br>
+
                         <div class=\"d-flex justify-content-between\">
-                            <button type=\"submit\" class=\"button-red d-flex aligin-center\" :disabled=\"disabled\" onclick=\"return confirm('Are you really sure?')\">Delete account <i>delete</i></button>
+                            <button type=\"submit\" class=\"btn btn-outline-danger d-flex aligin-center\" :disabled=\"disabled\" onclick=\"return confirm('Are you really sure?')\">Delete account <i>delete</i></button>
                             <button type=\"button\" class=\"mx-3 button-gray\" data-dismiss=\"modal\" @click=\"reWriteName = ''\">Cancel</button>
                         </div>
                     </form>
@@ -184,11 +195,12 @@ class __TwigTemplate_66345d33fe901fb29f30062aae18700c5d9c5c01685266b7b48f946fb48
         },
         methods: {
             checkName(){
-                this.disabled = this.name !== this.reWriteName;
+                this.disabled = this.name != this.reWriteName;
             }
         },
         created(){
             this.name = \$(\"#name\").val()
+            this.checkName();
         }
     })
 

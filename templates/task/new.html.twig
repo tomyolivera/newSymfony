@@ -4,7 +4,7 @@
 
 {% block body %}
     <p class="title">New Task</h1>
-
+    
     {{ include('task/_form.html.twig') }}
 
     {{ include('task/return_to_list.html.twig') }}
@@ -12,5 +12,5 @@
 
 {% block javascripts %}
     {{ parent() }}
-    <script src="{{asset('js/newTask.js')}}"></script>
+    <script src="{{asset('js/tasks.js')}}"></script>
 {% endblock %}

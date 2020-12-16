@@ -40,8 +40,8 @@ class __TwigTemplate_1032a20db4ee8edeae5dcc5d9b52fede98528ca9fab08fce741b1d35988
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "profile/_permissions.html.twig"));
 
         // line 1
-        echo "<div>
-    <p>Your permissions are: </p>
+        echo "<div class=\"text-pink-700\">
+    <p>Your permissions are</p>
     
     ";
         // line 4
@@ -49,49 +49,68 @@ class __TwigTemplate_1032a20db4ee8edeae5dcc5d9b52fede98528ca9fab08fce741b1d35988
         // line 5
         echo "
     ";
-        // line 6
-        if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 6, $this->source); })()), "user", [], "any", false, false, false, 6), "roles", [], "any", false, false, false, 6), 0, [], "array", false, false, false, 6), "ROLE_USER"))) {
-            // line 7
-            echo "        ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["roles"]) || array_key_exists("roles", $context) ? $context["roles"] : (function () { throw new RuntimeError('Variable "roles" does not exist.', 7, $this->source); })()), 0, [], "array", false, false, false, 7), "html", null, true);
+        // line 7
+        echo "    ";
+        if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 7, $this->source); })()), "user", [], "any", false, false, false, 7), "roles", [], "any", false, false, false, 7), 0, [], "array", false, false, false, 7), "ROLE_USER"))) {
+            // line 8
+            echo "    ";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["roles"]) || array_key_exists("roles", $context) ? $context["roles"] : (function () { throw new RuntimeError('Variable "roles" does not exist.', 8, $this->source); })()), 0, [], "array", false, false, false, 8), "html", null, true);
             echo "
 
-        ";
-        } elseif ((0 === twig_compare(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source,         // line 9
-(isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 9, $this->source); })()), "user", [], "any", false, false, false, 9), "roles", [], "any", false, false, false, 9), 0, [], "array", false, false, false, 9), "ROLE_MOD"))) {
-            // line 10
-            echo "        ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["roles"]) || array_key_exists("roles", $context) ? $context["roles"] : (function () { throw new RuntimeError('Variable "roles" does not exist.', 10, $this->source); })()), 0, [], "array", false, false, false, 10), "html", null, true);
+    ";
+            // line 11
+            echo "    ";
+        } elseif ((0 === twig_compare(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 11, $this->source); })()), "user", [], "any", false, false, false, 11), "roles", [], "any", false, false, false, 11), 0, [], "array", false, false, false, 11), "ROLE_MOD"))) {
+            // line 12
+            echo "    ";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["roles"]) || array_key_exists("roles", $context) ? $context["roles"] : (function () { throw new RuntimeError('Variable "roles" does not exist.', 12, $this->source); })()), 0, [], "array", false, false, false, 12), "html", null, true);
             echo "
 
-        ";
-        } elseif ((0 === twig_compare(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source,         // line 12
-(isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 12, $this->source); })()), "user", [], "any", false, false, false, 12), "roles", [], "any", false, false, false, 12), 0, [], "array", false, false, false, 12), "ROLE_ADMIN"))) {
-            // line 13
-            echo "        ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["roles"]) || array_key_exists("roles", $context) ? $context["roles"] : (function () { throw new RuntimeError('Variable "roles" does not exist.', 13, $this->source); })()), 0, [], "array", false, false, false, 13), "html", null, true);
-            echo " - ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["roles"]) || array_key_exists("roles", $context) ? $context["roles"] : (function () { throw new RuntimeError('Variable "roles" does not exist.', 13, $this->source); })()), 1, [], "array", false, false, false, 13), "html", null, true);
-            echo " - ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["roles"]) || array_key_exists("roles", $context) ? $context["roles"] : (function () { throw new RuntimeError('Variable "roles" does not exist.', 13, $this->source); })()), 2, [], "array", false, false, false, 13), "html", null, true);
-            echo "
-
-        ";
-        } else {
+    ";
+            // line 15
+            echo "    ";
+        } elseif ((0 === twig_compare(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 15, $this->source); })()), "user", [], "any", false, false, false, 15), "roles", [], "any", false, false, false, 15), 0, [], "array", false, false, false, 15), "ROLE_ADMIN"))) {
             // line 16
-            echo "        ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["roles"]) || array_key_exists("roles", $context) ? $context["roles"] : (function () { throw new RuntimeError('Variable "roles" does not exist.', 16, $this->source); })()), 0, [], "array", false, false, false, 16), "html", null, true);
-            echo " - ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["roles"]) || array_key_exists("roles", $context) ? $context["roles"] : (function () { throw new RuntimeError('Variable "roles" does not exist.', 16, $this->source); })()), 1, [], "array", false, false, false, 16), "html", null, true);
-            echo " - ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["roles"]) || array_key_exists("roles", $context) ? $context["roles"] : (function () { throw new RuntimeError('Variable "roles" does not exist.', 16, $this->source); })()), 2, [], "array", false, false, false, 16), "html", null, true);
-            echo " - ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["roles"]) || array_key_exists("roles", $context) ? $context["roles"] : (function () { throw new RuntimeError('Variable "roles" does not exist.', 16, $this->source); })()), 3, [], "array", false, false, false, 16), "html", null, true);
+            echo "    ";
+            $context["permissionsAdmin"] = (twig_length_filter($this->env, (isset($context["roles"]) || array_key_exists("roles", $context) ? $context["roles"] : (function () { throw new RuntimeError('Variable "roles" does not exist.', 16, $this->source); })())) - 2);
+            // line 17
             echo "
-        
+    ";
+            // line 18
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable(range(0, (isset($context["permissionsAdmin"]) || array_key_exists("permissionsAdmin", $context) ? $context["permissionsAdmin"] : (function () { throw new RuntimeError('Variable "permissionsAdmin" does not exist.', 18, $this->source); })()), 1));
+            foreach ($context['_seq'] as $context["_key"] => $context["i"]) {
+                // line 19
+                echo "        ";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["roles"]) || array_key_exists("roles", $context) ? $context["roles"] : (function () { throw new RuntimeError('Variable "roles" does not exist.', 19, $this->source); })()), $context["i"], [], "array", false, false, false, 19), "html", null, true);
+                echo "
+        ";
+                // line 20
+                if ((0 !== twig_compare($context["i"], (isset($context["permissionsAdmin"]) || array_key_exists("permissionsAdmin", $context) ? $context["permissionsAdmin"] : (function () { throw new RuntimeError('Variable "permissionsAdmin" does not exist.', 20, $this->source); })())))) {
+                    // line 21
+                    echo "            -
+        ";
+                }
+                // line 23
+                echo "    ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['i'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 24
+            echo "    
+    ";
+            // line 26
+            echo "    ";
+        } else {
+            // line 27
+            echo "    ";
+            echo twig_escape_filter($this->env, twig_join_filter((isset($context["roles"]) || array_key_exists("roles", $context) ? $context["roles"] : (function () { throw new RuntimeError('Variable "roles" does not exist.', 27, $this->source); })()), "-"), "html", null, true);
+            echo "
+
     ";
         }
-        // line 19
+        // line 30
         echo "</div>";
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -113,28 +132,39 @@ class __TwigTemplate_1032a20db4ee8edeae5dcc5d9b52fede98528ca9fab08fce741b1d35988
 
     public function getDebugInfo()
     {
-        return array (  95 => 19,  82 => 16,  71 => 13,  69 => 12,  63 => 10,  61 => 9,  55 => 7,  53 => 6,  50 => 5,  48 => 4,  43 => 1,);
+        return array (  114 => 30,  107 => 27,  104 => 26,  101 => 24,  95 => 23,  91 => 21,  89 => 20,  84 => 19,  80 => 18,  77 => 17,  74 => 16,  71 => 15,  65 => 12,  62 => 11,  56 => 8,  53 => 7,  50 => 5,  48 => 4,  43 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("<div>
-    <p>Your permissions are: </p>
+        return new Source("<div class=\"text-pink-700\">
+    <p>Your permissions are</p>
     
     {% set roles = ['BASIC', 'BAN', 'EDIT', 'DELETE'] %}
 
+    {# USER #}
     {% if app.user.roles[0] == 'ROLE_USER' %}
-        {{ roles[0] }}
+    {{ roles[0] }}
 
-        {% elseif app.user.roles[0] == 'ROLE_MOD' %}
-        {{ roles[0] }}
+    {# MOD #}
+    {% elseif app.user.roles[0] == 'ROLE_MOD' %}
+    {{ roles[0] }}
 
-        {% elseif app.user.roles[0] == 'ROLE_ADMIN' %}
-        {{ roles[0] }} - {{ roles[1] }} - {{ roles[2] }}
+    {# ADMIN #}
+    {% elseif app.user.roles[0] == 'ROLE_ADMIN' %}
+    {% set permissionsAdmin = roles|length - 2 %}
 
-        {% else %}
-        {{ roles[0] }} - {{ roles[1] }} - {{ roles[2] }} - {{ roles[3] }}
-        
+    {% for i in range(low = 0, high = permissionsAdmin, step = 1) %}
+        {{ roles[i] }}
+        {% if i != permissionsAdmin %}
+            -
+        {% endif %}
+    {% endfor %}
+    
+    {# OWNER #}
+    {% else %}
+    {{ roles|join('-') }}
+
     {% endif %}
 </div>", "profile/_permissions.html.twig", "C:\\xampp\\htdocs\\files\\symfony_folders\\newSymfony\\templates\\profile\\_permissions.html.twig");
     }

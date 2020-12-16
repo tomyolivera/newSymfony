@@ -1,19 +1,30 @@
-<div>
-    <p>Your permissions are: </p>
+<div class="text-pink-700">
+    <p>Your permissions are</p>
     
     {% set roles = ['BASIC', 'BAN', 'EDIT', 'DELETE'] %}
 
+    {# USER #}
     {% if app.user.roles[0] == 'ROLE_USER' %}
-        {{ roles[0] }}
+    {{ roles[0] }}
 
-        {% elseif app.user.roles[0] == 'ROLE_MOD' %}
-        {{ roles[0] }}
+    {# MOD #}
+    {% elseif app.user.roles[0] == 'ROLE_MOD' %}
+    {{ roles[0] }}
 
-        {% elseif app.user.roles[0] == 'ROLE_ADMIN' %}
-        {{ roles[0] }} - {{ roles[1] }} - {{ roles[2] }}
+    {# ADMIN #}
+    {% elseif app.user.roles[0] == 'ROLE_ADMIN' %}
+    {% set permissionsAdmin = roles|length - 2 %}
 
-        {% else %}
-        {{ roles[0] }} - {{ roles[1] }} - {{ roles[2] }} - {{ roles[3] }}
-        
+    {% for i in range(low = 0, high = permissionsAdmin, step = 1) %}
+        {{ roles[i] }}
+        {% if i != permissionsAdmin %}
+            -
+        {% endif %}
+    {% endfor %}
+    
+    {# OWNER #}
+    {% else %}
+    {{ roles|join('-') }}
+
     {% endif %}
 </div>

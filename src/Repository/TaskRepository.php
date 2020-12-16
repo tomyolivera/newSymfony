@@ -28,6 +28,18 @@ class TaskRepository extends ServiceEntityRepository
             ->getQuery()->getResult();
     }
 
+    public function getTotalTasksByUser($id)
+    {
+        return $this->getEntityManager()
+                ->createQuery('
+                    SELECT count(task.id)
+                    FROM App:Task task
+                    WHERE task.user = :id
+                ')
+                ->setParameter(':id', $id)
+                ->getResult();
+    }
+
     public function deleteAll($id)
     {
         return $this->getEntityManager()

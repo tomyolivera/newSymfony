@@ -86,12 +86,17 @@ class __TwigTemplate_44f39c3a286089b309ab613c160d0714c638714c3a76f7e1605ced6ec59
 
         // line 6
         echo "    <div>
+        ";
+        // line 7
+        $context["class"] = "bg-gray-900 text-light p-5 mb-5 rounded h-15 w-15 d-flex justify-content-between";
+        // line 8
+        echo "
         <p class=\"title\">My profile</p>
 
         ";
-        // line 9
+        // line 11
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["data"]) || array_key_exists("data", $context) ? $context["data"] : (function () { throw new RuntimeError('Variable "data" does not exist.', 9, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["data"]) || array_key_exists("data", $context) ? $context["data"] : (function () { throw new RuntimeError('Variable "data" does not exist.', 11, $this->source); })()));
         $context['loop'] = [
           'parent' => $context['_parent'],
           'index0' => 0,
@@ -106,18 +111,21 @@ class __TwigTemplate_44f39c3a286089b309ab613c160d0714c638714c3a76f7e1605ced6ec59
             $context['loop']['last'] = 1 === $length;
         }
         foreach ($context['_seq'] as $context["_key"] => $context["dat"]) {
-            // line 10
+            // line 12
             echo "            <div class=\"text-dark my-5\">
 
                 ";
-            // line 13
+            // line 15
             echo "                <p class=\"title\">ID </p>
-                <div class=\"bg-gray-500 p-5 mb-5 d-flex justify-content-between\">
+                <div class=\"";
+            // line 16
+            echo twig_escape_filter($this->env, (isset($context["class"]) || array_key_exists("class", $context) ? $context["class"] : (function () { throw new RuntimeError('Variable "class" does not exist.', 16, $this->source); })()), "html", null, true);
+            echo "\">
                     <div>
                         <span class=\"title\">ID: </span>
                         <span class=\"title\">";
-            // line 17
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["dat"], "id", [], "any", false, false, false, 17), "html", null, true);
+            // line 19
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["dat"], "id", [], "any", false, false, false, 19), "html", null, true);
             echo "</span>
                     </div>
 
@@ -126,99 +134,117 @@ class __TwigTemplate_44f39c3a286089b309ab613c160d0714c638714c3a76f7e1605ced6ec59
                 </div>
 
                 ";
-            // line 25
+            // line 27
             echo "                <p class=\"title\">Photo </p>
-                <div class=\"bg-gray-500 p-5 mb-5 rounded d-flex justify-content-between\">
+                <div class=\"";
+            // line 28
+            echo twig_escape_filter($this->env, (isset($context["class"]) || array_key_exists("class", $context) ? $context["class"] : (function () { throw new RuntimeError('Variable "class" does not exist.', 28, $this->source); })()), "html", null, true);
+            echo "\">
                     <div>
                         <span class=\"title\">Photo: </span>
                         <span class=\"h5\">You don´t have a photo yet</span>
                     </div>
 
                     <div class=\"d-flex justify-content-between align-center\">
-                        <button class=\"button-dark\"><i>edit</i></button>
+                        <button class=\"button-orange\"><i>edit</i></button>
                     </div>
                 </div>
 
                 ";
-            // line 38
+            // line 40
             echo "                <p class=\"title\">Name </p>
-                <div class=\"bg-gray-500 p-5 mb-5 rounded d-flex justify-content-between\">
+                <div class=\"";
+            // line 41
+            echo twig_escape_filter($this->env, (isset($context["class"]) || array_key_exists("class", $context) ? $context["class"] : (function () { throw new RuntimeError('Variable "class" does not exist.', 41, $this->source); })()), "html", null, true);
+            echo "\">
                     <div>
                         <span class=\"title\">Name: </span>
                         <span class=\"title\">";
-            // line 42
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["dat"], "name", [], "any", false, false, false, 42), "html", null, true);
+            // line 44
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["dat"], "name", [], "any", false, false, false, 44), "html", null, true);
             echo "</span>
                     </div>
 
                     <div class=\"d-flex justify-content-between align-center\">
-                        <button class=\"button-dark\"><i>edit</i></button>
+                        <button class=\"button-orange\"><i>edit</i></button>
                     </div>
                 </div>
 
                 ";
-            // line 51
+            // line 53
             echo "                <p class=\"title\">Email </p>
-                <div class=\"bg-gray-500 p-5 mb-5 rounded d-flex justify-content-between\">
+                <div class=\"";
+            // line 54
+            echo twig_escape_filter($this->env, (isset($context["class"]) || array_key_exists("class", $context) ? $context["class"] : (function () { throw new RuntimeError('Variable "class" does not exist.', 54, $this->source); })()), "html", null, true);
+            echo "\">
                     <div>
                         <span class=\"title\">Email: </span>
                         <span class=\"title\">";
-            // line 55
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["dat"], "email", [], "any", false, false, false, 55), "html", null, true);
+            // line 57
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["dat"], "email", [], "any", false, false, false, 57), "html", null, true);
             echo "</span>
                     </div>
 
-                    <div class=\"d-flex  justify-content-between align-center\">
-                        <button class=\"button-dark\"><i>edit</i></button>
+                    <div class=\"d-flex justify-content-between align-center\">
+                        <button class=\"button-orange\"><i>edit</i></button>
                     </div>
                 </div>
 
                 ";
-            // line 64
+            // line 66
             echo "                <p class=\"title\">Role </p>
-                <div class=\"bg-gray-500 p-5 mb-5 rounded d-flex justify-content-between\">
+                <div class=\"";
+            // line 67
+            echo twig_escape_filter($this->env, (isset($context["class"]) || array_key_exists("class", $context) ? $context["class"] : (function () { throw new RuntimeError('Variable "class" does not exist.', 67, $this->source); })()), "html", null, true);
+            echo "\">
                     <div>
                         <span class=\"title\">Role: </span>     
                         <span class=\"title\"> ";
-            // line 68
-            $context["role"] = twig_split_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["dat"], "roles", [], "any", false, false, false, 68), 0, [], "array", false, false, false, 68), "_");
+            // line 70
+            $context["role"] = twig_split_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["dat"], "roles", [], "any", false, false, false, 70), 0, [], "array", false, false, false, 70), "_");
             echo " ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["role"]) || array_key_exists("role", $context) ? $context["role"] : (function () { throw new RuntimeError('Variable "role" does not exist.', 68, $this->source); })()), 1, [], "array", false, false, false, 68), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["role"]) || array_key_exists("role", $context) ? $context["role"] : (function () { throw new RuntimeError('Variable "role" does not exist.', 70, $this->source); })()), 1, [], "array", false, false, false, 70), "html", null, true);
             echo " </span>
                     </div>
                     
                     ";
-            // line 71
-            $this->loadTemplate("profile/_permissions.html.twig", "profile/index.html.twig", 71)->display($context);
-            // line 72
+            // line 73
+            $this->loadTemplate("profile/_permissions.html.twig", "profile/index.html.twig", 73)->display($context);
+            // line 74
             echo "                </div>
 
                 ";
-            // line 75
+            // line 77
             echo "                <p class=\"title\">Password </p>
-                <div class=\"bg-gray-500 p-5 mb-5 rounded d-flex justify-content-between\">
+                <div class=\"";
+            // line 78
+            echo twig_escape_filter($this->env, (isset($context["class"]) || array_key_exists("class", $context) ? $context["class"] : (function () { throw new RuntimeError('Variable "class" does not exist.', 78, $this->source); })()), "html", null, true);
+            echo "\">
                     <div>
                         <span class=\"title\">Password: **********</span>
                     </div>
 
                     <div>
-                        <button class=\"button-dark\"><i>edit</i></button>
+                        <button class=\"button-orange\"><i>edit</i></button>
                     </div>
                 </div>
 
                 ";
-            // line 87
+            // line 89
             echo "                <p class=\"title\">Delete account </p>
-                <div class=\"bg-gray-500 p-5 mb-5 rounded d-flex justify-content-between\">
+                <div class=\"";
+            // line 90
+            echo twig_escape_filter($this->env, (isset($context["class"]) || array_key_exists("class", $context) ? $context["class"] : (function () { throw new RuntimeError('Variable "class" does not exist.', 90, $this->source); })()), "html", null, true);
+            echo "\">
                     <div>
                         <span class=\"title\">This action is irreversible</span>
                     </div>
 
                     <div>
                         ";
-            // line 94
-            $this->loadTemplate("profile/_delete.html.twig", "profile/index.html.twig", 94)->display($context);
-            // line 95
+            // line 96
+            $this->loadTemplate("profile/_delete.html.twig", "profile/index.html.twig", 96)->display($context);
+            // line 97
             echo "                    </div>
                 </div>
 
@@ -238,7 +264,7 @@ class __TwigTemplate_44f39c3a286089b309ab613c160d0714c638714c3a76f7e1605ced6ec59
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['dat'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 102
+        // line 104
         echo "
     </div>
 ";
@@ -262,7 +288,7 @@ class __TwigTemplate_44f39c3a286089b309ab613c160d0714c638714c3a76f7e1605ced6ec59
 
     public function getDebugInfo()
     {
-        return array (  242 => 102,  222 => 95,  220 => 94,  211 => 87,  198 => 75,  194 => 72,  192 => 71,  184 => 68,  178 => 64,  167 => 55,  161 => 51,  150 => 42,  144 => 38,  130 => 25,  120 => 17,  114 => 13,  110 => 10,  93 => 9,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  268 => 104,  248 => 97,  246 => 96,  237 => 90,  234 => 89,  221 => 78,  218 => 77,  214 => 74,  212 => 73,  204 => 70,  198 => 67,  195 => 66,  184 => 57,  178 => 54,  175 => 53,  164 => 44,  158 => 41,  155 => 40,  141 => 28,  138 => 27,  128 => 19,  122 => 16,  119 => 15,  115 => 12,  98 => 11,  93 => 8,  91 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -273,6 +299,8 @@ class __TwigTemplate_44f39c3a286089b309ab613c160d0714c638714c3a76f7e1605ced6ec59
 
 {% block body %}
     <div>
+        {% set class = \"bg-gray-900 text-light p-5 mb-5 rounded h-15 w-15 d-flex justify-content-between\" %}
+
         <p class=\"title\">My profile</p>
 
         {% for dat in data %}
@@ -280,7 +308,7 @@ class __TwigTemplate_44f39c3a286089b309ab613c160d0714c638714c3a76f7e1605ced6ec59
 
                 {# ID #}
                 <p class=\"title\">ID </p>
-                <div class=\"bg-gray-500 p-5 mb-5 d-flex justify-content-between\">
+                <div class=\"{{ class }}\">
                     <div>
                         <span class=\"title\">ID: </span>
                         <span class=\"title\">{{dat.id}}</span>
@@ -292,46 +320,46 @@ class __TwigTemplate_44f39c3a286089b309ab613c160d0714c638714c3a76f7e1605ced6ec59
 
                 {# Photo #}
                 <p class=\"title\">Photo </p>
-                <div class=\"bg-gray-500 p-5 mb-5 rounded d-flex justify-content-between\">
+                <div class=\"{{ class }}\">
                     <div>
                         <span class=\"title\">Photo: </span>
                         <span class=\"h5\">You don´t have a photo yet</span>
                     </div>
 
                     <div class=\"d-flex justify-content-between align-center\">
-                        <button class=\"button-dark\"><i>edit</i></button>
+                        <button class=\"button-orange\"><i>edit</i></button>
                     </div>
                 </div>
 
                 {# Name #}
                 <p class=\"title\">Name </p>
-                <div class=\"bg-gray-500 p-5 mb-5 rounded d-flex justify-content-between\">
+                <div class=\"{{ class }}\">
                     <div>
                         <span class=\"title\">Name: </span>
                         <span class=\"title\">{{dat.name}}</span>
                     </div>
 
                     <div class=\"d-flex justify-content-between align-center\">
-                        <button class=\"button-dark\"><i>edit</i></button>
+                        <button class=\"button-orange\"><i>edit</i></button>
                     </div>
                 </div>
 
                 {# Email #}
                 <p class=\"title\">Email </p>
-                <div class=\"bg-gray-500 p-5 mb-5 rounded d-flex justify-content-between\">
+                <div class=\"{{ class }}\">
                     <div>
                         <span class=\"title\">Email: </span>
                         <span class=\"title\">{{dat.email}}</span>
                     </div>
 
-                    <div class=\"d-flex  justify-content-between align-center\">
-                        <button class=\"button-dark\"><i>edit</i></button>
+                    <div class=\"d-flex justify-content-between align-center\">
+                        <button class=\"button-orange\"><i>edit</i></button>
                     </div>
                 </div>
 
                 {# Email #}
                 <p class=\"title\">Role </p>
-                <div class=\"bg-gray-500 p-5 mb-5 rounded d-flex justify-content-between\">
+                <div class=\"{{ class }}\">
                     <div>
                         <span class=\"title\">Role: </span>     
                         <span class=\"title\"> {% set role = dat.roles[0]|split('_') %} {{role[1]}} </span>
@@ -342,19 +370,19 @@ class __TwigTemplate_44f39c3a286089b309ab613c160d0714c638714c3a76f7e1605ced6ec59
 
                 {# Password #}
                 <p class=\"title\">Password </p>
-                <div class=\"bg-gray-500 p-5 mb-5 rounded d-flex justify-content-between\">
+                <div class=\"{{ class }}\">
                     <div>
                         <span class=\"title\">Password: **********</span>
                     </div>
 
                     <div>
-                        <button class=\"button-dark\"><i>edit</i></button>
+                        <button class=\"button-orange\"><i>edit</i></button>
                     </div>
                 </div>
 
                 {# Delete #}
                 <p class=\"title\">Delete account </p>
-                <div class=\"bg-gray-500 p-5 mb-5 rounded d-flex justify-content-between\">
+                <div class=\"{{ class }}\">
                     <div>
                         <span class=\"title\">This action is irreversible</span>
                     </div>

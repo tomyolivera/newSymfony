@@ -30,4 +30,13 @@ $(document).ready(()=>{
     $(".button-orange").addClass("btn bg-orange-500 hover:bg-orange-800 text-white");
     $(".button-gray").addClass("btn bg-gray-800 hover:bg-gray-700 text-white");
     $(".button-dark").addClass("btn bg-gray-900 hover:bg-gray-800 text-white d-flex align-center");
+
+    // Permissions
+    $(".not_enough_permissions").addClass('disabled');
+    
+    // General functions
+    $(".not_enough_permissions").click(()=>{
+        alert("You don't have enough permissions for this action");
+    })
+    
 });

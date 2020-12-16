@@ -4,6 +4,8 @@
 
 {% block body %}
     <div>
+        {% set class = "bg-gray-900 text-light p-5 mb-5 rounded h-15 w-15 d-flex justify-content-between" %}
+
         <p class="title">My profile</p>
 
         {% for dat in data %}
@@ -11,7 +13,7 @@
 
                 {# ID #}
                 <p class="title">ID </p>
-                <div class="bg-gray-500 p-5 mb-5 d-flex justify-content-between">
+                <div class="{{ class }}">
                     <div>
                         <span class="title">ID: </span>
                         <span class="title">{{dat.id}}</span>
@@ -23,46 +25,46 @@
 
                 {# Photo #}
                 <p class="title">Photo </p>
-                <div class="bg-gray-500 p-5 mb-5 rounded d-flex justify-content-between">
+                <div class="{{ class }}">
                     <div>
                         <span class="title">Photo: </span>
                         <span class="h5">You don´t have a photo yet</span>
                     </div>
 
                     <div class="d-flex justify-content-between align-center">
-                        <button class="button-dark"><i>edit</i></button>
+                        <button class="button-orange"><i>edit</i></button>
                     </div>
                 </div>
 
                 {# Name #}
                 <p class="title">Name </p>
-                <div class="bg-gray-500 p-5 mb-5 rounded d-flex justify-content-between">
+                <div class="{{ class }}">
                     <div>
                         <span class="title">Name: </span>
                         <span class="title">{{dat.name}}</span>
                     </div>
 
                     <div class="d-flex justify-content-between align-center">
-                        <button class="button-dark"><i>edit</i></button>
+                        <button class="button-orange"><i>edit</i></button>
                     </div>
                 </div>
 
                 {# Email #}
                 <p class="title">Email </p>
-                <div class="bg-gray-500 p-5 mb-5 rounded d-flex justify-content-between">
+                <div class="{{ class }}">
                     <div>
                         <span class="title">Email: </span>
                         <span class="title">{{dat.email}}</span>
                     </div>
 
-                    <div class="d-flex  justify-content-between align-center">
-                        <button class="button-dark"><i>edit</i></button>
+                    <div class="d-flex justify-content-between align-center">
+                        <button class="button-orange"><i>edit</i></button>
                     </div>
                 </div>
 
                 {# Email #}
                 <p class="title">Role </p>
-                <div class="bg-gray-500 p-5 mb-5 rounded d-flex justify-content-between">
+                <div class="{{ class }}">
                     <div>
                         <span class="title">Role: </span>     
                         <span class="title"> {% set role = dat.roles[0]|split('_') %} {{role[1]}} </span>
@@ -73,19 +75,19 @@
 
                 {# Password #}
                 <p class="title">Password </p>
-                <div class="bg-gray-500 p-5 mb-5 rounded d-flex justify-content-between">
+                <div class="{{ class }}">
                     <div>
                         <span class="title">Password: **********</span>
                     </div>
 
                     <div>
-                        <button class="button-dark"><i>edit</i></button>
+                        <button class="button-orange"><i>edit</i></button>
                     </div>
                 </div>
 
                 {# Delete #}
                 <p class="title">Delete account </p>
-                <div class="bg-gray-500 p-5 mb-5 rounded d-flex justify-content-between">
+                <div class="{{ class }}">
                     <div>
                         <span class="title">This action is irreversible</span>
                     </div>

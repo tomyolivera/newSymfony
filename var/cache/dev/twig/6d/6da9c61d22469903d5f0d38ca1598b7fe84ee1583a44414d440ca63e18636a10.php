@@ -94,22 +94,22 @@ class __TwigTemplate_60aab6c5eea98eb7ed666a6b19a09c35a6020d9d00ef6976dadf01389e9
                     <table class=\"min-w-full divide-y divide-gray-200\">
                         <thead>
                             <tr>
-                                <th class=\"px-6 py-3 bg-gray-900 text-xs text-light uppercase\">
+                                <th class=\"px-6 py-3 text-xs text-light uppercase\">
                                     Id
                                 </th>
-                                <th class=\"px-6 py-3 bg-gray-900 text-xs text-light uppercase\">
+                                <th class=\"px-6 py-3 text-xs text-light uppercase\">
                                     Name
                                 </th>
-                                <th class=\"px-6 py-3 bg-gray-900 text-xs text-light uppercase\">
+                                <th class=\"px-6 py-3 text-xs text-light uppercase\">
                                     Email
                                 </th>
-                                <th class=\"px-6 py-3 bg-gray-900 text-xs text-light uppercase\">
+                                <th class=\"px-6 py-3 text-xs text-light uppercase\">
                                     Roles
                                 </th>
-                                <th class=\"px-6 py-3 bg-gray-900 text-xs text-light uppercase\">
+                                <th class=\"px-6 py-3 text-xs text-light uppercase\">
                                     Ban
                                 </th>
-                                <th class=\"px-6 py-3 bg-gray-900 text-xs text-light uppercase \">
+                                <th class=\"px-6 py-3 text-xs text-light uppercase \">
                                     Action
                                 </th>
                             </tr>
@@ -166,12 +166,6 @@ class __TwigTemplate_60aab6c5eea98eb7ed666a6b19a09c35a6020d9d00ef6976dadf01389e9
         // line 51
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/admin.js"), "html", null, true);
         echo "\"></script>
-    <script>
-        \$(\".not_enough_permissions\").addClass('disabled');
-        \$(\".not_enough_permissions\").click(()=>{
-            alert(\"You don't have enough permissions for this action\");
-        })
-    </script>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -211,22 +205,22 @@ class __TwigTemplate_60aab6c5eea98eb7ed666a6b19a09c35a6020d9d00ef6976dadf01389e9
                     <table class=\"min-w-full divide-y divide-gray-200\">
                         <thead>
                             <tr>
-                                <th class=\"px-6 py-3 bg-gray-900 text-xs text-light uppercase\">
+                                <th class=\"px-6 py-3 text-xs text-light uppercase\">
                                     Id
                                 </th>
-                                <th class=\"px-6 py-3 bg-gray-900 text-xs text-light uppercase\">
+                                <th class=\"px-6 py-3 text-xs text-light uppercase\">
                                     Name
                                 </th>
-                                <th class=\"px-6 py-3 bg-gray-900 text-xs text-light uppercase\">
+                                <th class=\"px-6 py-3 text-xs text-light uppercase\">
                                     Email
                                 </th>
-                                <th class=\"px-6 py-3 bg-gray-900 text-xs text-light uppercase\">
+                                <th class=\"px-6 py-3 text-xs text-light uppercase\">
                                     Roles
                                 </th>
-                                <th class=\"px-6 py-3 bg-gray-900 text-xs text-light uppercase\">
+                                <th class=\"px-6 py-3 text-xs text-light uppercase\">
                                     Ban
                                 </th>
-                                <th class=\"px-6 py-3 bg-gray-900 text-xs text-light uppercase \">
+                                <th class=\"px-6 py-3 text-xs text-light uppercase \">
                                     Action
                                 </th>
                             </tr>
@@ -249,12 +243,6 @@ class __TwigTemplate_60aab6c5eea98eb7ed666a6b19a09c35a6020d9d00ef6976dadf01389e9
     <script src=\"{{ asset('bundles/fosjsrouting/js/router.min.js') }}\"></script>
     <script src=\"{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}\"></script>
     <script src=\"{{ asset('js/admin.js') }}\"></script>
-    <script>
-        \$(\".not_enough_permissions\").addClass('disabled');
-        \$(\".not_enough_permissions\").click(()=>{
-            alert(\"You don't have enough permissions for this action\");
-        })
-    </script>
 {% endblock %}", "admin/users.html.twig", "C:\\xampp\\htdocs\\files\\symfony_folders\\newSymfony\\templates\\admin\\users.html.twig");
     }
 }

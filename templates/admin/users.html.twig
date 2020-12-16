@@ -11,22 +11,22 @@
                     <table class="min-w-full divide-y divide-gray-200">
                         <thead>
                             <tr>
-                                <th class="px-6 py-3 bg-gray-900 text-xs text-light uppercase">
+                                <th class="px-6 py-3 text-xs text-light uppercase">
                                     Id
                                 </th>
-                                <th class="px-6 py-3 bg-gray-900 text-xs text-light uppercase">
+                                <th class="px-6 py-3 text-xs text-light uppercase">
                                     Name
                                 </th>
-                                <th class="px-6 py-3 bg-gray-900 text-xs text-light uppercase">
+                                <th class="px-6 py-3 text-xs text-light uppercase">
                                     Email
                                 </th>
-                                <th class="px-6 py-3 bg-gray-900 text-xs text-light uppercase">
+                                <th class="px-6 py-3 text-xs text-light uppercase">
                                     Roles
                                 </th>
-                                <th class="px-6 py-3 bg-gray-900 text-xs text-light uppercase">
+                                <th class="px-6 py-3 text-xs text-light uppercase">
                                     Ban
                                 </th>
-                                <th class="px-6 py-3 bg-gray-900 text-xs text-light uppercase ">
+                                <th class="px-6 py-3 text-xs text-light uppercase ">
                                     Action
                                 </th>
                             </tr>
@@ -49,10 +49,4 @@
     <script src="{{ asset('bundles/fosjsrouting/js/router.min.js') }}"></script>
     <script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
     <script src="{{ asset('js/admin.js') }}"></script>
-    <script>
-        $(".not_enough_permissions").addClass('disabled');
-        $(".not_enough_permissions").click(()=>{
-            alert("You don't have enough permissions for this action");
-        })
-    </script>
 {% endblock %}

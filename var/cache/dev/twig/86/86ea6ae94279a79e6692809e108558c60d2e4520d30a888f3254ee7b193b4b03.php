@@ -40,8 +40,8 @@ class __TwigTemplate_50f8d956006720038c06bb800177c848dd9375660b220b659873b32775e
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "sideBar.html.twig"));
 
         // line 1
-        echo "<div class=\"sidebar-container text-light bg-gray-800 shadow-2xl\">
-    <div class=\"logo bg-gray-800\">
+        echo "<div class=\"sideBar sidebar-container text-light shadow-2xl\">
+    <div class=\"logo\">
         <h4 class=\"h4 mt-2\">FACER</h4>
     </div>
     <div class=\"menu\">
@@ -148,8 +148,8 @@ class __TwigTemplate_50f8d956006720038c06bb800177c848dd9375660b220b659873b32775e
 
     public function getSourceContext()
     {
-        return new Source("<div class=\"sidebar-container text-light bg-gray-800 shadow-2xl\">
-    <div class=\"logo bg-gray-800\">
+        return new Source("<div class=\"sideBar sidebar-container text-light shadow-2xl\">
+    <div class=\"logo\">
         <h4 class=\"h4 mt-2\">FACER</h4>
     </div>
     <div class=\"menu\">

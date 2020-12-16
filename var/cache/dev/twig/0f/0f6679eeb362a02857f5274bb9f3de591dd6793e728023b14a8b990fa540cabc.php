@@ -61,7 +61,7 @@ class __TwigTemplate_d9782bcea1b0c99db27a0d6e3de6d8808482c46234c65363af45e45a138
         // line 23
         echo "    
   </head>
-  <body class=\"bg-gray-400\">
+  <body class=\"body\">
     
     <div class=\"d-flex\">
       ";
@@ -90,7 +90,7 @@ class __TwigTemplate_d9782bcea1b0c99db27a0d6e3de6d8808482c46234c65363af45e45a138
     ";
         // line 42
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 54
+        // line 59
         echo "
   </body>
 </html>";
@@ -194,8 +194,13 @@ class __TwigTemplate_d9782bcea1b0c99db27a0d6e3de6d8808482c46234c65363af45e45a138
         echo "\"></script>
 
       <script>
-        window.onload = function(){
-            \$(\".allPage\").fadeOut();
+        window.onload = function()
+        {
+          \$(\".allPage\").fadeOut();
+        }
+        function showPassword(password)
+        {
+          password.type = password.type == \"password\" ? \"text\" : \"password\";
         }
       </script>
     ";
@@ -219,7 +224,7 @@ class __TwigTemplate_d9782bcea1b0c99db27a0d6e3de6d8808482c46234c65363af45e45a138
 
     public function getDebugInfo()
     {
-        return array (  193 => 46,  188 => 43,  178 => 42,  160 => 34,  148 => 20,  142 => 17,  134 => 10,  124 => 9,  106 => 4,  94 => 54,  92 => 42,  83 => 35,  81 => 34,  77 => 32,  75 => 31,  71 => 29,  69 => 28,  62 => 23,  60 => 9,  52 => 4,  47 => 1,);
+        return array (  193 => 46,  188 => 43,  178 => 42,  160 => 34,  148 => 20,  142 => 17,  134 => 10,  124 => 9,  106 => 4,  94 => 59,  92 => 42,  83 => 35,  81 => 34,  77 => 32,  75 => 31,  71 => 29,  69 => 28,  62 => 23,  60 => 9,  52 => 4,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -248,7 +253,7 @@ class __TwigTemplate_d9782bcea1b0c99db27a0d6e3de6d8808482c46234c65363af45e45a138
     {% endblock %}
     
   </head>
-  <body class=\"bg-gray-400\">
+  <body class=\"body\">
     
     <div class=\"d-flex\">
       {% include \"sideBar.html.twig\" %}
@@ -272,8 +277,13 @@ class __TwigTemplate_d9782bcea1b0c99db27a0d6e3de6d8808482c46234c65363af45e45a138
       <script src=\"{{ asset('js/general.js') }}\"></script>
 
       <script>
-        window.onload = function(){
-            \$(\".allPage\").fadeOut();
+        window.onload = function()
+        {
+          \$(\".allPage\").fadeOut();
+        }
+        function showPassword(password)
+        {
+          password.type = password.type == \"password\" ? \"text\" : \"password\";
         }
       </script>
     {% endblock %}

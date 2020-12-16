@@ -40,7 +40,7 @@ class __TwigTemplate_b796989badab86b5a6decf8e91644de236c76bc3a9181381890d2ebdcce
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "header.html.twig"));
 
         // line 1
-        echo "<nav class=\"navbar navbar-expand-lg navbar-light bg-gray-900 shadow-2xl\">
+        echo "<nav class=\"header navbar navbar-expand-lg\">
     <div>
         ";
         // line 3
@@ -83,7 +83,7 @@ class __TwigTemplate_b796989badab86b5a6decf8e91644de236c76bc3a9181381890d2ebdcce
                 </a>
             </li>
             <li class=\"nav-item\">
-                <a class=\"nav-link rounded mx-2 bg-gray-200\" href=\"https://github.com/tomyolivera\" target=\"_blank\">
+                <a class=\"nav-link rounded mx-2\" href=\"https://github.com/tomyolivera\" target=\"_blank\">
                     <img src=\"https://image.flaticon.com/icons/png/512/25/25231.png\" width=\"35\" heigth=\"35\"></img>
                 </a>
             </li>
@@ -125,7 +125,7 @@ class __TwigTemplate_b796989badab86b5a6decf8e91644de236c76bc3a9181381890d2ebdcce
 
     public function getSourceContext()
     {
-        return new Source("<nav class=\"navbar navbar-expand-lg navbar-light bg-gray-900 shadow-2xl\">
+        return new Source("<nav class=\"header navbar navbar-expand-lg\">
     <div>
         {% if is_granted('IS_AUTHENTICATED_FULLY') %}
             <p class=\"text-light\">
@@ -158,7 +158,7 @@ class __TwigTemplate_b796989badab86b5a6decf8e91644de236c76bc3a9181381890d2ebdcce
                 </a>
             </li>
             <li class=\"nav-item\">
-                <a class=\"nav-link rounded mx-2 bg-gray-200\" href=\"https://github.com/tomyolivera\" target=\"_blank\">
+                <a class=\"nav-link rounded mx-2\" href=\"https://github.com/tomyolivera\" target=\"_blank\">
                     <img src=\"https://image.flaticon.com/icons/png/512/25/25231.png\" width=\"35\" heigth=\"35\"></img>
                 </a>
             </li>

@@ -87,7 +87,7 @@ class __TwigTemplate_4de0a20a230047607ec955618255bcd5959a88450f0f742e159c63e4132
 
         // line 6
         echo "    <p class=\"title\">New Task</h1>
-
+    
     ";
         // line 8
         echo twig_include($this->env, $context, "task/_form.html.twig");
@@ -122,7 +122,7 @@ class __TwigTemplate_4de0a20a230047607ec955618255bcd5959a88450f0f742e159c63e4132
         echo "
     <script src=\"";
         // line 15
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/newTask.js"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/tasks.js"), "html", null, true);
         echo "\"></script>
 ";
         
@@ -156,7 +156,7 @@ class __TwigTemplate_4de0a20a230047607ec955618255bcd5959a88450f0f742e159c63e4132
 
 {% block body %}
     <p class=\"title\">New Task</h1>
-
+    
     {{ include('task/_form.html.twig') }}
 
     {{ include('task/return_to_list.html.twig') }}
@@ -164,7 +164,7 @@ class __TwigTemplate_4de0a20a230047607ec955618255bcd5959a88450f0f742e159c63e4132
 
 {% block javascripts %}
     {{ parent() }}
-    <script src=\"{{asset('js/newTask.js')}}\"></script>
+    <script src=\"{{asset('js/tasks.js')}}\"></script>
 {% endblock %}", "task/new.html.twig", "C:\\xampp\\htdocs\\files\\symfony_folders\\newSymfony\\templates\\task\\new.html.twig");
     }
 }

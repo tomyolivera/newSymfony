@@ -29,22 +29,26 @@ class TaskController extends AbstractController
     /**
      * @Route("/task/new", name="task_new", methods={"GET","POST"})
      */
-    public function new(Request $request): Response
+    public function new(Request $request, TaskRepository $taskRepository): Response
     {
+        $count = $taskRepository->getTotalTasksByUser($this->getUser());
+        if($count[0][1] >= 15) return $this->redirectToRoute('task_index');
+
         $task = new Task();
         $form = $this->createForm(TaskType::class, $task);
         $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
+
+        if($form->isSubmitted() && $form->isValid()) {
             $entityManager = $this->getDoctrine()->getManager();
             $user = $this->getUser();
             $task->setUser($user);
             $entityManager->persist($task);
             $entityManager->flush();
-
+            
             return $this->redirectToRoute('task_index');
-        }
-
+        }   
+        
         return $this->render('task/new.html.twig', [
             'task' => $task,
             'form' => $form->createView(),

@@ -1,17 +1,59 @@
-{{ form_start(form) }}
-    <div class="form-name">
-        {{ form_label(form.name) }}
-        <div class="form-error">
-            {{ form_errors(form.name) }}
-        </div>
-        {{ form_widget(form.name) }}
-    </div>
+<div id="app">
+    {{ form_start(form) }}
+        <div class="form-name">
+            {{ form_label(form.name) }}
+            <p class="text-xs">Min: 3 characters</p>
 
-    <div class="form-description">
-        {{ form_label(form.description) }}
-        <div class="form-error">
-            {{ form_errors(form.description) }}
+            <div class="form-error">
+                {{ form_errors(form.name) }}
+            </div>
+            {{ form_widget(form.name) }}
         </div>
-        {{ form_widget(form.description) }}
-    </div>
-{{ form_end(form) }}
+
+        <div class="form-description">
+            {{ form_label(form.description) }}
+            <div class="form-error">
+                {{ form_errors(form.description) }}
+            </div>
+            {{ form_widget(form.description) }}
+        </div>
+
+        <div class="form-description">
+            {{ form_label(form.date_for) }}
+            <div class="form-error">
+                {{ form_errors(form.date_for) }}
+            </div>
+            {{ form_widget(form.date_for) }}
+        </div>
+
+        <button type="button" class="button-blue my-3" onclick="setActualDate()">Set actual date</button>
+
+    {{ form_end(form) }}
+</div>
+
+<script src="{{asset('js/tasks.js')}}"></script>
+
+<script>
+
+    new Vue({
+        el: '#app',
+        data: {
+            disabled: true,
+        },
+        methods: {
+            disableBtn(){
+                setTimeout(() => {
+                    this.disabled = true;
+                }, 1);
+            },
+            checkField(){
+                if($("#task_name").val().length >= 3)
+                    this.disabled = false;
+                else
+                    this.disabled = true;
+
+            }
+        },
+    })
+
+</script>
