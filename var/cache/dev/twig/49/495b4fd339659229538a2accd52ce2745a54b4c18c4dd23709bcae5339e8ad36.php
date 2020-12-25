@@ -98,7 +98,7 @@ class __TwigTemplate_4e0fc3111ee0b15ed1cc099ffc2cc294be59cfa82a5e50b6390cb535576
         echo "
         </div>
 
-        <button type=\"button\" class=\"button-blue my-3\" onclick=\"setActualDate()\">Set actual date</button>
+        <button type=\"button\" class=\"button-blue my-3\" onclick=\"setActualDate()\">Today</button>
 
     ";
         // line 31
@@ -132,6 +132,9 @@ class __TwigTemplate_4e0fc3111ee0b15ed1cc099ffc2cc294be59cfa82a5e50b6390cb535576
 
             }
         },
+        mounted(){
+            this.checkField();
+        }
     })
 
 </script>";
@@ -188,7 +191,7 @@ class __TwigTemplate_4e0fc3111ee0b15ed1cc099ffc2cc294be59cfa82a5e50b6390cb535576
             {{ form_widget(form.date_for) }}
         </div>
 
-        <button type=\"button\" class=\"button-blue my-3\" onclick=\"setActualDate()\">Set actual date</button>
+        <button type=\"button\" class=\"button-blue my-3\" onclick=\"setActualDate()\">Today</button>
 
     {{ form_end(form) }}
 </div>
@@ -216,6 +219,9 @@ class __TwigTemplate_4e0fc3111ee0b15ed1cc099ffc2cc294be59cfa82a5e50b6390cb535576
 
             }
         },
+        mounted(){
+            this.checkField();
+        }
     })
 
 </script>", "task/_form.html.twig", "C:\\xampp\\htdocs\\files\\symfony_folders\\newSymfony\\templates\\task\\_form.html.twig");

@@ -4,7 +4,6 @@ namespace App\Controller;
 
 use App\Entity\User;
 use App\Form\AdminType;
-use App\Repository\UserRepository;
 use Knp\Component\Pager\PaginatorInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -14,9 +13,6 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class AdminController extends AbstractController
 {
-    const IS_NOT_XML = "This is not a XML request";
-    const NOT_VALID_TOKEN = "The token is not valid";
-    const NOT_ALLOWED = "You are not allowed for this action";
     /**
      * @Route("/admin/dashboard", name="admin")
      */
@@ -47,22 +43,31 @@ class AdminController extends AbstractController
      */
     public function edit(Request $request, User $user)
     {
-        if($this->isGranted('ROLE_OWNER') || $this->isGranted('ROLE_ALLOWED_TO_EDIT') && $user->getRoles() != ['ROLE_OWNER'] && $user->getRoles() != ['ROLE_ADMIN']){
-            $form = $this->createForm(AdminType::class, $user);
-            $form->handleRequest($request);
+        if(!($this->isGranted('ROLE_OWNER') || $this->isGranted('ROLE_ALLOWED_TO_EDIT') && $user->getRoles() != ['ROLE_OWNER'] && $user->getRoles() != ['ROLE_ADMIN'])) throw new \Exception(self::NOT_ALLOWED);
+        
+        $form = $this->createForm(AdminType::class, $user);
+        $form->handleRequest($request);
+        
+        if ($form->isSubmitted() && $form->isValid()) {
+            $role = $request->request->get('roles');
 
-            if ($form->isSubmitted() && $form->isValid()) {
-                $this->getDoctrine()->getManager()->flush();
-                return $this->redirectToRoute('admin_users');
-            }
+            if($role != 'ROLE_USER' && $role != 'ROLE_MOD' && $role != 'ROLE_ADMIN' && $role != '') throw new \Exception(self::NOT_VALID_DATA);
+            if($role == $this->getUser()->getRoles()) throw new \Exception(self::NOT_ALLOWED);
+            if($role != '' && is_array($role) && count($role) > 1) throw new \Exception(self::NOT_VALID_DATA);
 
-            return $this->render('admin/_edit.html.twig', [
-                'user' => $user,
-                'form' => $form->createView(),
-            ]);
-        }else{
-            return new \Exception(self::NOT_ALLOWED);
+            $em = $this->getDoctrine()->getManager();
+            $user->setRoles([$role]);
+            $user->getBan() ? $user->setRoles(['ROLE_BAN']) : '';
+
+            $em->flush();
+
+            return $this->redirectToRoute('admin_users');
         }
+
+        return $this->render('admin/_edit.html.twig', [
+            'user' => $user,
+            'form' => $form->createView(),
+        ]);
     }
     
     /**
@@ -70,15 +75,12 @@ class AdminController extends AbstractController
      */
     public function delete(Request $request, User $user)
     {
-        if($this->isGranted('ROLE_ALLOWED_TO_DELETE') && $user->getRoles() != ['ROLE_OWNER']){
-            if ($this->isCsrfTokenValid('delete'.$user->getId(), $request->request->get('_token'))) {
-                $entityManager = $this->getDoctrine()->getManager();
-                $entityManager->remove($user);
-                $entityManager->flush();
-            }else{
-                throw new \Exception(self::NOT_VALID_TOKEN);
-            }
-        }
+        if(!($this->isGranted('ROLE_ALLOWED_TO_DELETE') && $user->getRoles() != ['ROLE_OWNER'])) throw new \Exception(self::NOT_ALLOWED);
+        if (!$this->isCsrfTokenValid('delete'.$user->getId(), $request->request->get('_token'))) throw new \Exception(self::NOT_VALID_TOKEN);
+
+        $entityManager = $this->getDoctrine()->getManager();
+        $entityManager->remove($user);
+        $entityManager->flush();
         return $this->redirectToRoute('admin_users');
     }
 
@@ -87,25 +89,20 @@ class AdminController extends AbstractController
      */
     public function changeBan(Request $request, User $user)
     {
-        if($request->isXmlHttpRequest()){
-            if($this->isGranted('ROLE_ALLOWED_TO_BAN') && $user->getRoles() != ['ROLE_OWNER']){
-                $em = $this->getDoctrine()->getManager();
-                if($user->getBan()){
-                    $user->setRoles(['ROLE_USER']);
-                    $user->setBan(false);
-                }else{
-                    $user->setRoles(['ROLE_BAN']);
-                    $user->setBan(true);
-                }
-                $em->flush();
-                $ban = $user->getBan();
-                return new JsonResponse(['ban' => $ban]);
-            }else{
-                throw new \Exception(self::NOT_ALLOWED);
-            }
+        if(!$request->isXmlHttpRequest()) throw new \Exception(self::IS_NOT_XML);
+        if(!($this->isGranted('ROLE_ALLOWED_TO_BAN') && $user->getRoles() != ['ROLE_OWNER'])) throw new \Exception(self::NOT_ALLOWED);
+
+        $em = $this->getDoctrine()->getManager();
+        if($user->getBan()){
+            $user->setRoles(['ROLE_USER']);
+            $user->setBan(false);
         }else{
-            throw new \Exception(self::IS_NOT_XML);
+            $user->setRoles(['ROLE_BAN']);
+            $user->setBan(true);
         }
+        $em->flush();
+        $ban = $user->getBan();
+        return new JsonResponse(['ban' => $ban]);
     }
 
 }

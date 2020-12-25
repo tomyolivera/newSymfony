@@ -3,7 +3,8 @@
 {% block title %}Profile{% endblock %}
 
 {% block body %}
-    <div>
+    <div id="appProfile">
+        
         {% set class = "bg-gray-900 text-light p-5 mb-5 rounded h-15 w-15 d-flex justify-content-between" %}
 
         <p class="title">My profile</p>
@@ -85,7 +86,28 @@
                     </div>
                 </div>
 
-                {# Delete #}
+                {# Actions #}
+                {# Disable - Enable account #}
+                {% if is_granted('ROLE_DISABLE') %}
+                    {% set enable_disable = 'Enable' %}
+                    {% set color_btn = 'btn-outline-success' %}
+                {% else %}
+                    {% set enable_disable = 'Disable' %}
+                    {% set color_btn = 'btn-outline-danger' %}
+                {% endif %}
+
+                <p class="title">{{ enable_disable }} account</p>
+                <div class="{{ class }}">
+                    <div>
+                        <span class="title">{{ enable_disable }} account</span>
+                    </div>
+
+                    <div>
+                        {% include "profile/_disable.html.twig" %}
+                    </div>
+                </div>
+
+                {# Delete account #}
                 <p class="title">Delete account </p>
                 <div class="{{ class }}">
                     <div>
@@ -103,4 +125,10 @@
         {% endfor %}
 
     </div>
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+
+<script src="{{ asset('js/profile.js') }}"></script>
 {% endblock %}

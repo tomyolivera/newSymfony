@@ -44,7 +44,9 @@ class __TwigTemplate_9b29247524c435b9e206ce49ecd9c934e4f9801afbda37edba175842e1e
         $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 1, $this->source); })()), "roles", [], "any", false, false, false, 1));
         foreach ($context['_seq'] as $context["_key"] => $context["rol"]) {
             // line 2
-            echo "    <div class=\"form-roles\">
+            echo "    <div class=\"form-roles\" id=\"roles_";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 2, $this->source); })()), "id", [], "any", false, false, false, 2), "html", null, true);
+            echo "\">
         ";
             // line 3
             if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 3, $this->source); })()), "roles", [], "any", false, false, false, 3), [0 => "ROLE_OWNER"]))) {
@@ -123,13 +125,13 @@ class __TwigTemplate_9b29247524c435b9e206ce49ecd9c934e4f9801afbda37edba175842e1e
 
     public function getDebugInfo()
     {
-        return array (  100 => 18,  92 => 16,  83 => 13,  81 => 12,  73 => 10,  71 => 9,  63 => 7,  61 => 6,  54 => 4,  50 => 3,  47 => 2,  43 => 1,);
+        return array (  102 => 18,  94 => 16,  85 => 13,  83 => 12,  75 => 10,  73 => 9,  65 => 7,  63 => 6,  56 => 4,  52 => 3,  47 => 2,  43 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% for rol in user.roles %}
-    <div class=\"form-roles\">
+    <div class=\"form-roles\" id=\"roles_{{ user.id }}\">
         {% if user.roles == ['ROLE_OWNER'] %}    
             <span class=\"text-yellow-400 d-flex justify-content-between\"> {% set role = rol|split('_') %} {{role[1]}} <i>star</i> </span>
 

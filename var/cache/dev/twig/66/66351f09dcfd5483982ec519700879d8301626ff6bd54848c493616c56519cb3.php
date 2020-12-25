@@ -41,50 +41,58 @@ class __TwigTemplate_b796989badab86b5a6decf8e91644de236c76bc3a9181381890d2ebdcce
 
         // line 1
         echo "<nav class=\"header navbar navbar-expand-lg\">
-    <div>
+    <div class=\"text-light d-flex align-center\">
         ";
         // line 3
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("IS_AUTHENTICATED_FULLY")) {
             // line 4
-            echo "            <p class=\"text-light\">
+            echo "            <p>
                 Welcome: 
                 <span class=\"text-warning\">";
             // line 6
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 6, $this->source); })()), "user", [], "any", false, false, false, 6), "name", [], "any", false, false, false, 6), "html", null, true);
             echo " </span>
             </p>
+            <a href=\"#\" class=\"d-flex align-center mx-5\">
+                <i>notifications</i> <span class=\"badge\"><div class=\"badge-warning p-1 rounded\">0</div></span>
+            </a>
         ";
         } else {
-            // line 9
-            echo "            <a href=\"\" class=\"navbar-brand text-light\">Welcome to FACER</a>
+            // line 12
+            echo "            <a href=\"\" class=\"navbar-brand\">Welcome to FACER</a>
         ";
         }
-        // line 11
-        echo "            
+        // line 13
+        echo " 
     </div>
+
     <button class=\"navbar-toggler\" data-toggle=\"collapse\" data-target=\"#menu-collapse\" aria-expanded=\"false\">
         <i class=\"material-icons text-white\">menu</i>
     </button>
+
     <div id=\"menu-collapse\" class=\"collapse navbar-collapse\">
         <ul class=\"navbar-nav ml-auto\">
             <li class=\"nav-item\">
-                <a class=\"nav-link rounded mx-2\" href=\"https://www.facebook.com/tomi.olivera.2004\" target=\"_blank\">
-                    <img src=\"https://i.pinimg.com/originals/57/98/53/5798533bb3f2a08ee3514f9c6f6e03be.png\" width=\"35\" heigth=\"35\"></img>
+                <a class=\"nav-link rounded mx-2\" href=\"https://github.com/tomyolivera\" target=\"_blank\">
+                    <img src=\"https://image.flaticon.com/icons/png/512/25/25231.png\" width=\"35\" heigth=\"35\"></img>
                 </a>
             </li>
+
             <li class=\"nav-item\">
                 <a class=\"nav-link rounded mx-2\" href=\"https://twitter.com/Tomyolivera2004\" target=\"_blank\">
                     <img src=\"https://assets.stickpng.com/images/580b57fcd9996e24bc43c53e.png\" width=\"35\" heigth=\"35\"></img>
                 </a>
             </li>
+
             <li class=\"nav-item\">
                 <a class=\"nav-link rounded mx-2\" href=\"https://www.instagram.com/tomy_olivera/\" target=\"_blank\">
                     <img src=\"https://assets.stickpng.com/images/580b57fcd9996e24bc43c521.png\" width=\"35\" heigth=\"35\"></img>
                 </a>
             </li>
+
             <li class=\"nav-item\">
-                <a class=\"nav-link rounded mx-2\" href=\"https://github.com/tomyolivera\" target=\"_blank\">
-                    <img src=\"https://image.flaticon.com/icons/png/512/25/25231.png\" width=\"35\" heigth=\"35\"></img>
+                <a class=\"nav-link rounded mx-2\" href=\"https://www.facebook.com/tomi.olivera.2004\" target=\"_blank\">
+                    <img src=\"https://i.pinimg.com/originals/57/98/53/5798533bb3f2a08ee3514f9c6f6e03be.png\" width=\"35\" heigth=\"35\" class=\"bg-gray-100 rounded\"></img>
                 </a>
             </li>
         </ul>
@@ -92,7 +100,7 @@ class __TwigTemplate_b796989badab86b5a6decf8e91644de236c76bc3a9181381890d2ebdcce
 </nav>
 
 ";
-        // line 43
+        // line 50
         echo "<div class=\"allPage\">
     <div class=\"preloader\"></div>
 </div>
@@ -120,46 +128,53 @@ class __TwigTemplate_b796989badab86b5a6decf8e91644de236c76bc3a9181381890d2ebdcce
 
     public function getDebugInfo()
     {
-        return array (  96 => 43,  63 => 11,  59 => 9,  53 => 6,  49 => 4,  47 => 3,  43 => 1,);
+        return array (  104 => 50,  66 => 13,  62 => 12,  53 => 6,  49 => 4,  47 => 3,  43 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("<nav class=\"header navbar navbar-expand-lg\">
-    <div>
+    <div class=\"text-light d-flex align-center\">
         {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-            <p class=\"text-light\">
+            <p>
                 Welcome: 
                 <span class=\"text-warning\">{{ app.user.name }} </span>
             </p>
+            <a href=\"#\" class=\"d-flex align-center mx-5\">
+                <i>notifications</i> <span class=\"badge\"><div class=\"badge-warning p-1 rounded\">0</div></span>
+            </a>
         {% else %}
-            <a href=\"\" class=\"navbar-brand text-light\">Welcome to FACER</a>
-        {% endif %}
-            
+            <a href=\"\" class=\"navbar-brand\">Welcome to FACER</a>
+        {% endif %} 
     </div>
+
     <button class=\"navbar-toggler\" data-toggle=\"collapse\" data-target=\"#menu-collapse\" aria-expanded=\"false\">
         <i class=\"material-icons text-white\">menu</i>
     </button>
+
     <div id=\"menu-collapse\" class=\"collapse navbar-collapse\">
         <ul class=\"navbar-nav ml-auto\">
             <li class=\"nav-item\">
-                <a class=\"nav-link rounded mx-2\" href=\"https://www.facebook.com/tomi.olivera.2004\" target=\"_blank\">
-                    <img src=\"https://i.pinimg.com/originals/57/98/53/5798533bb3f2a08ee3514f9c6f6e03be.png\" width=\"35\" heigth=\"35\"></img>
+                <a class=\"nav-link rounded mx-2\" href=\"https://github.com/tomyolivera\" target=\"_blank\">
+                    <img src=\"https://image.flaticon.com/icons/png/512/25/25231.png\" width=\"35\" heigth=\"35\"></img>
                 </a>
             </li>
+
             <li class=\"nav-item\">
                 <a class=\"nav-link rounded mx-2\" href=\"https://twitter.com/Tomyolivera2004\" target=\"_blank\">
                     <img src=\"https://assets.stickpng.com/images/580b57fcd9996e24bc43c53e.png\" width=\"35\" heigth=\"35\"></img>
                 </a>
             </li>
+
             <li class=\"nav-item\">
                 <a class=\"nav-link rounded mx-2\" href=\"https://www.instagram.com/tomy_olivera/\" target=\"_blank\">
                     <img src=\"https://assets.stickpng.com/images/580b57fcd9996e24bc43c521.png\" width=\"35\" heigth=\"35\"></img>
                 </a>
             </li>
+
             <li class=\"nav-item\">
-                <a class=\"nav-link rounded mx-2\" href=\"https://github.com/tomyolivera\" target=\"_blank\">
-                    <img src=\"https://image.flaticon.com/icons/png/512/25/25231.png\" width=\"35\" heigth=\"35\"></img>
+                <a class=\"nav-link rounded mx-2\" href=\"https://www.facebook.com/tomi.olivera.2004\" target=\"_blank\">
+                    <img src=\"https://i.pinimg.com/originals/57/98/53/5798533bb3f2a08ee3514f9c6f6e03be.png\" width=\"35\" heigth=\"35\" class=\"bg-gray-100 rounded\"></img>
                 </a>
             </li>
         </ul>

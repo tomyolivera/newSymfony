@@ -13,4 +13,9 @@
 {% block javascripts %}
     {{ parent() }}
     <script src="{{asset('js/tasks.js')}}"></script>
+    <script>
+        $(document).ready(()=>{  
+            setActualDate();
+        });
+    </script>
 {% endblock %}

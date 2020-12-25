@@ -3,11 +3,9 @@
 {% block title %}Edit User{% endblock %}
 
 {% block body %}
-    <div class="container">
-        <p class="title">Edit User: {{ user.id }}</p>
+    <p class="title">Edit User: {{ user.id }}</p>
 
-        {{ include('admin/_form.html.twig') }}
+    {{ include('admin/_form.html.twig') }}
 
-        {{ include('admin/_return_to_list.html.twig') }}
-    </div>
+    {{ include('admin/_return_to_list.html.twig') }}
 {% endblock %}

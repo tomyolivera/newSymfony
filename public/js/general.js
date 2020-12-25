@@ -22,7 +22,7 @@ $(document).ready(()=>{
 
     // Buttons
     $(".button-blue").addClass("btn bg-blue-500 hover:bg-blue-700 text-white");
-    $(".button-green").addClass("btn bg-green-500 hover:bg-green-700 text-white");
+    $(".button-green").addClass("btn bg-green-600 hover:bg-green-800 text-white");
     $(".button-red").addClass("btn bg-red-600 hover:bg-red-800 text-white");
     $(".button-yellow").addClass("btn bg-yellow-600 hover:bg-yellow-800 text-white");
     $(".button-purple").addClass("btn bg-purple-500 hover:bg-gray-800 text-white");

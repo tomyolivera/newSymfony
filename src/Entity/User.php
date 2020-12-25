@@ -55,6 +55,11 @@ class User implements UserInterface
      */
     private $task;
 
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $disable;
+
     public static function loadValidatorMetadata(ClassMetadata $metadata)
     {
         $metadata->addPropertyConstraint('name', new Assert\Length([
@@ -79,6 +84,7 @@ class User implements UserInterface
 
     public function __construct(){
         $this->ban = false;
+        $this->disable = false;
         $this->roles = ['ROLE_USER'];
     }
 
@@ -115,8 +121,6 @@ class User implements UserInterface
     public function getRoles(): array
     {
         $roles = $this->roles;
-        // guarantee every user at least has ROLE_USER
-        // $roles[] = 'ROLE_USER';
 
         return array_unique($roles);
     }
@@ -182,5 +186,17 @@ class User implements UserInterface
     {
         // If you store any temporary, sensitive data on the user, clear it here
         // $this->plainPassword = null;
+    }
+
+    public function getDisable(): ?bool
+    {
+        return $this->disable;
+    }
+
+    public function setDisable(bool $disable): self
+    {
+        $this->disable = $disable;
+
+        return $this;
     }
 }

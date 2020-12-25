@@ -26,7 +26,7 @@
             {{ form_widget(form.date_for) }}
         </div>
 
-        <button type="button" class="button-blue my-3" onclick="setActualDate()">Set actual date</button>
+        <button type="button" class="button-blue my-3" onclick="setActualDate()">Today</button>
 
     {{ form_end(form) }}
 </div>
@@ -54,6 +54,9 @@
 
             }
         },
+        mounted(){
+            this.checkField();
+        }
     })
 
 </script>

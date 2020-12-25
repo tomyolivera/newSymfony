@@ -15,6 +15,7 @@ return [
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
         '/admin/dashboard' => [[['_route' => 'admin', '_controller' => 'App\\Controller\\AdminController::dashboard'], null, null, null, false, false, null]],
         '/admin/users' => [[['_route' => 'admin_users', '_controller' => 'App\\Controller\\AdminController::findUsers'], null, null, null, true, false, null]],
+        '/chat' => [[['_route' => 'chat', '_controller' => 'App\\Controller\\ChatController::index'], null, null, null, false, false, null]],
         '/' => [[['_route' => 'index', '_controller' => 'App\\Controller\\HomeController::index'], null, null, null, false, false, null]],
         '/profile' => [[['_route' => 'profile', '_controller' => 'App\\Controller\\ProfileController::index'], null, null, null, false, false, null]],
         '/register' => [[['_route' => 'register', '_controller' => 'App\\Controller\\RegisterController::index'], null, null, null, false, false, null]],
@@ -47,12 +48,15 @@ return [
                     .'|ban/([^/]++)(*:241)'
                 .')'
                 .'|/lucky/number/([^/]++)(*:272)'
-                .'|/profile/delete/([^/]++)(*:304)'
-                .'|/task/([^/]++)/(?'
-                    .'|edit(*:334)'
-                    .'|delete(*:348)'
+                .'|/profile/d(?'
+                    .'|isable/([^/]++)(*:308)'
+                    .'|elete/([^/]++)(*:330)'
                 .')'
-                .'|/js/routing(?:\\.(js|json))?(*:384)'
+                .'|/task/([^/]++)/(?'
+                    .'|edit(*:361)'
+                    .'|delete(*:375)'
+                .')'
+                .'|/js/routing(?:\\.(js|json))?(*:411)'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
@@ -67,10 +71,11 @@ return [
         221 => [[['_route' => 'admin_users_delete', '_controller' => 'App\\Controller\\AdminController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
         241 => [[['_route' => 'admin_users_ban', '_controller' => 'App\\Controller\\AdminController::changeBan'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
         272 => [[['_route' => 'app_lucky_number', '_controller' => 'App\\Controller\\LuckyController::number'], ['max'], null, null, false, true, null]],
-        304 => [[['_route' => 'profile_delete', '_controller' => 'App\\Controller\\ProfileController::deleteUser'], ['id'], ['DELETE' => 0], null, false, true, null]],
-        334 => [[['_route' => 'task_edit', '_controller' => 'App\\Controller\\TaskController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        348 => [[['_route' => 'task_delete', '_controller' => 'App\\Controller\\TaskController::delete'], ['id'], ['DELETE' => 0], null, false, false, null]],
-        384 => [
+        308 => [[['_route' => 'profile_disable', '_controller' => 'App\\Controller\\ProfileController::disableUser'], ['id'], ['PUT' => 0], null, false, true, null]],
+        330 => [[['_route' => 'profile_delete', '_controller' => 'App\\Controller\\ProfileController::deleteUser'], ['id'], ['DELETE' => 0], null, false, true, null]],
+        361 => [[['_route' => 'task_edit', '_controller' => 'App\\Controller\\TaskController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        375 => [[['_route' => 'task_delete', '_controller' => 'App\\Controller\\TaskController::delete'], ['id'], ['DELETE' => 0], null, false, false, null]],
+        411 => [
             [['_route' => 'fos_js_routing_js', '_controller' => 'fos_js_routing.controller::indexAction', '_format' => 'js'], ['_format'], ['GET' => 0], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

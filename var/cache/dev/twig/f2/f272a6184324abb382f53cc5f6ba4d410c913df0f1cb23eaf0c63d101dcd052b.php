@@ -85,22 +85,19 @@ class __TwigTemplate_1e9e4b82613ff45be39142c9bcc266ac9fd23b2b0aa63ed8602cf0809f0
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <div class=\"container\">
-        <p class=\"title\">Edit User: ";
-        // line 7
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 7, $this->source); })()), "id", [], "any", false, false, false, 7), "html", null, true);
+        echo "    <p class=\"title\">Edit User: ";
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 6, $this->source); })()), "id", [], "any", false, false, false, 6), "html", null, true);
         echo "</p>
 
-        ";
-        // line 9
+    ";
+        // line 8
         echo twig_include($this->env, $context, "admin/_form.html.twig");
         echo "
 
-        ";
-        // line 11
+    ";
+        // line 10
         echo twig_include($this->env, $context, "admin/_return_to_list.html.twig");
         echo "
-    </div>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -122,7 +119,7 @@ class __TwigTemplate_1e9e4b82613ff45be39142c9bcc266ac9fd23b2b0aa63ed8602cf0809f0
 
     public function getDebugInfo()
     {
-        return array (  101 => 11,  96 => 9,  91 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  99 => 10,  94 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -132,13 +129,11 @@ class __TwigTemplate_1e9e4b82613ff45be39142c9bcc266ac9fd23b2b0aa63ed8602cf0809f0
 {% block title %}Edit User{% endblock %}
 
 {% block body %}
-    <div class=\"container\">
-        <p class=\"title\">Edit User: {{ user.id }}</p>
+    <p class=\"title\">Edit User: {{ user.id }}</p>
 
-        {{ include('admin/_form.html.twig') }}
+    {{ include('admin/_form.html.twig') }}
 
-        {{ include('admin/_return_to_list.html.twig') }}
-    </div>
+    {{ include('admin/_return_to_list.html.twig') }}
 {% endblock %}", "admin/_edit.html.twig", "C:\\xampp\\htdocs\\files\\symfony_folders\\newSymfony\\templates\\admin\\_edit.html.twig");
     }
 }

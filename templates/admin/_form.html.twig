@@ -1,23 +1,39 @@
 {{ form_start(form) }}
 
-<div class="form-id">
-    <label for="form_id">Id:</label>
-    <input type="text" name="form_id" disabled value="{{ user.id }}" class="input-customize">
-</div>
+{# {% set fields = ['id', 'email', 'name'] %}
 
-<div class="form-email">
-    <label for="form_email">Email:</label>
-    <input type="text" name="form_email" disabled value="{{ user.email }}" class="input-customize">
-</div>
+{% for i in range(low = 0, high = fields|length - 1, step = 1) %}
+    <div>
+        <label for="form_{{ fields[i] }}">{{ fields[i]|upper }}</label>
+        <input type="text" name="form_{{ fields[i] }}"
+        value="{% if i == 0 %}{{ user.id }}{% elseif i == 1 %}{{ user.email }}{% else %}{{ user.name }}{% endif %}"
+        class="input-customize">
+    </div>
+{% endfor %} #}
 
-<div class="form-name">
-    <label for="form_name">Name:</label>
-    <input type="text" name="form_name" disabled value="{{ user.name }}" class="input-customize">
-</div>
+{# ROLES #}
 
-<div>
-    Roles:
-    {{ form_rest(form.roles) }}
-</div>
+{% if user.ban %}
+    <p class="h4 text-danger">This user is banned</p>
+{% endif %}
+
+{% set roles = ['user', 'mod', 'admin'] %}
+
+{% for i in range(low = 0, high = roles|length - 1, step = 1) %}
+    {% if ( i == roles|length - 1 and is_granted('ROLE_OWNER') or (i < roles|length - 1) ) %}
+        <input
+            type="radio"
+            id="{{ roles[i] }}"
+            name="roles"
+            value="ROLE_{{ roles[i]|upper }}"
+            {% if user.roles[0]|split('ROLE_')[1] == roles[i]|upper %} checked {% endif %}
+            
+            {% if user.ban %}
+                disabled
+            {% endif %}
+        >
+        <label for="{{ roles[i] }}">{{ roles[i]|upper }}</label><br>
+    {% endif %}
+{% endfor %}
 
 {{ form_end(form) }}

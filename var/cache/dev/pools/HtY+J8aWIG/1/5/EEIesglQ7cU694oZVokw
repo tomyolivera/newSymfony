@@ -13,6 +13,11 @@ return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\
             'name' => [
                 'task_delete_all',
             ],
+            'options' => [
+                [
+                    'expose' => true,
+                ],
+            ],
             'methods' => [
                 [
                     'DELETE',

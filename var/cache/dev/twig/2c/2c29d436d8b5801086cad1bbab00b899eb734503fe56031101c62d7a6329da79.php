@@ -124,6 +124,11 @@ class __TwigTemplate_4de0a20a230047607ec955618255bcd5959a88450f0f742e159c63e4132
         // line 15
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/tasks.js"), "html", null, true);
         echo "\"></script>
+    <script>
+        \$(document).ready(()=>{  
+            setActualDate();
+        });
+    </script>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -165,6 +170,11 @@ class __TwigTemplate_4de0a20a230047607ec955618255bcd5959a88450f0f742e159c63e4132
 {% block javascripts %}
     {{ parent() }}
     <script src=\"{{asset('js/tasks.js')}}\"></script>
+    <script>
+        \$(document).ready(()=>{  
+            setActualDate();
+        });
+    </script>
 {% endblock %}", "task/new.html.twig", "C:\\xampp\\htdocs\\files\\symfony_folders\\newSymfony\\templates\\task\\new.html.twig");
     }
 }

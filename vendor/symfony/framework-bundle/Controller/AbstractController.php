@@ -31,7 +31,6 @@ use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\HttpFoundation\StreamedResponse;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\HttpKernel\HttpKernelInterface;
-use Symfony\Component\Messenger\Envelope;
 use Symfony\Component\Messenger\MessageBusInterface;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 use Symfony\Component\Routing\RouterInterface;
@@ -46,6 +45,7 @@ use Symfony\Component\WebLink\EventListener\AddLinkHeaderListener;
 use Symfony\Component\WebLink\GenericLinkProvider;
 use Symfony\Contracts\Service\ServiceSubscriberInterface;
 use Twig\Environment;
+use Symfony\Component\HttpFoundation\Cookie;
 
 /**
  * Provides common features needed in controllers.
@@ -54,6 +54,13 @@ use Twig\Environment;
  */
 abstract class AbstractController implements ServiceSubscriberInterface
 {
+    public const IS_NOT_XML = "This is not a XML request"; 
+    public const NOT_VALID_TOKEN = "The token is not valid";
+    public const NOT_ALLOWED = "You are not allowed for this action";
+    public const PASSWORDS_DO_NOT_MATCH = "The passwords do not match";
+    public const NOT_VALID_USER = "This is not your account";
+    public const NOT_VALID_DATA = "This data is not valid";
+
     /**
      * @var ContainerInterface
      */
@@ -83,6 +90,18 @@ abstract class AbstractController implements ServiceSubscriberInterface
         }
 
         return $this->container->get('parameter_bag')->get($name);
+    }
+
+    public function setNewCookie(string $name, string $value, int $time): void
+    {
+        $response = new Response();
+        $response->headers->setCookie(new Cookie($name, $value, $time));
+        $response->sendHeaders();
+    }
+
+    public function getCookies(Request $request): array
+    {
+        return $request->cookies->all();
     }
 
     public static function getSubscribedServices()
@@ -389,21 +408,6 @@ abstract class AbstractController implements ServiceSubscriberInterface
         }
 
         return $this->container->get('security.csrf.token_manager')->isTokenValid(new CsrfToken($id, $token));
-    }
-
-    /**
-     * Dispatches a message to the bus.
-     *
-     * @param object|Envelope $message The message or the message pre-wrapped in an envelope
-     */
-    protected function dispatchMessage($message, array $stamps = []): Envelope
-    {
-        if (!$this->container->has('messenger.default_bus')) {
-            $message = class_exists(Envelope::class) ? 'You need to define the "messenger.default_bus" configuration option.' : 'Try running "composer require symfony/messenger".';
-            throw new \LogicException('The message bus is not enabled in your application. '.$message);
-        }
-
-        return $this->container->get('messenger.default_bus')->dispatch($message, $stamps);
     }
 
     /**

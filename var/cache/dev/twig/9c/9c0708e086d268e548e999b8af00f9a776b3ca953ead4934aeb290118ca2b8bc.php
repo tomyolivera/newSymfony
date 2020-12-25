@@ -27,6 +27,7 @@ class __TwigTemplate_44f39c3a286089b309ab613c160d0714c638714c3a76f7e1605ced6ec59
         $this->blocks = [
             'title' => [$this, 'block_title'],
             'body' => [$this, 'block_body'],
+            'javascripts' => [$this, 'block_javascripts'],
         ];
     }
 
@@ -85,18 +86,19 @@ class __TwigTemplate_44f39c3a286089b309ab613c160d0714c638714c3a76f7e1605ced6ec59
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <div>
+        echo "    <div id=\"appProfile\">
+        
         ";
-        // line 7
-        $context["class"] = "bg-gray-900 text-light p-5 mb-5 rounded h-15 w-15 d-flex justify-content-between";
         // line 8
+        $context["class"] = "bg-gray-900 text-light p-5 mb-5 rounded h-15 w-15 d-flex justify-content-between";
+        // line 9
         echo "
         <p class=\"title\">My profile</p>
 
         ";
-        // line 11
+        // line 12
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["data"]) || array_key_exists("data", $context) ? $context["data"] : (function () { throw new RuntimeError('Variable "data" does not exist.', 11, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["data"]) || array_key_exists("data", $context) ? $context["data"] : (function () { throw new RuntimeError('Variable "data" does not exist.', 12, $this->source); })()));
         $context['loop'] = [
           'parent' => $context['_parent'],
           'index0' => 0,
@@ -111,21 +113,21 @@ class __TwigTemplate_44f39c3a286089b309ab613c160d0714c638714c3a76f7e1605ced6ec59
             $context['loop']['last'] = 1 === $length;
         }
         foreach ($context['_seq'] as $context["_key"] => $context["dat"]) {
-            // line 12
+            // line 13
             echo "            <div class=\"text-dark my-5\">
 
                 ";
-            // line 15
+            // line 16
             echo "                <p class=\"title\">ID </p>
                 <div class=\"";
-            // line 16
-            echo twig_escape_filter($this->env, (isset($context["class"]) || array_key_exists("class", $context) ? $context["class"] : (function () { throw new RuntimeError('Variable "class" does not exist.', 16, $this->source); })()), "html", null, true);
+            // line 17
+            echo twig_escape_filter($this->env, (isset($context["class"]) || array_key_exists("class", $context) ? $context["class"] : (function () { throw new RuntimeError('Variable "class" does not exist.', 17, $this->source); })()), "html", null, true);
             echo "\">
                     <div>
                         <span class=\"title\">ID: </span>
                         <span class=\"title\">";
-            // line 19
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["dat"], "id", [], "any", false, false, false, 19), "html", null, true);
+            // line 20
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["dat"], "id", [], "any", false, false, false, 20), "html", null, true);
             echo "</span>
                     </div>
 
@@ -134,11 +136,11 @@ class __TwigTemplate_44f39c3a286089b309ab613c160d0714c638714c3a76f7e1605ced6ec59
                 </div>
 
                 ";
-            // line 27
+            // line 28
             echo "                <p class=\"title\">Photo </p>
                 <div class=\"";
-            // line 28
-            echo twig_escape_filter($this->env, (isset($context["class"]) || array_key_exists("class", $context) ? $context["class"] : (function () { throw new RuntimeError('Variable "class" does not exist.', 28, $this->source); })()), "html", null, true);
+            // line 29
+            echo twig_escape_filter($this->env, (isset($context["class"]) || array_key_exists("class", $context) ? $context["class"] : (function () { throw new RuntimeError('Variable "class" does not exist.', 29, $this->source); })()), "html", null, true);
             echo "\">
                     <div>
                         <span class=\"title\">Photo: </span>
@@ -151,17 +153,17 @@ class __TwigTemplate_44f39c3a286089b309ab613c160d0714c638714c3a76f7e1605ced6ec59
                 </div>
 
                 ";
-            // line 40
+            // line 41
             echo "                <p class=\"title\">Name </p>
                 <div class=\"";
-            // line 41
-            echo twig_escape_filter($this->env, (isset($context["class"]) || array_key_exists("class", $context) ? $context["class"] : (function () { throw new RuntimeError('Variable "class" does not exist.', 41, $this->source); })()), "html", null, true);
+            // line 42
+            echo twig_escape_filter($this->env, (isset($context["class"]) || array_key_exists("class", $context) ? $context["class"] : (function () { throw new RuntimeError('Variable "class" does not exist.', 42, $this->source); })()), "html", null, true);
             echo "\">
                     <div>
                         <span class=\"title\">Name: </span>
                         <span class=\"title\">";
-            // line 44
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["dat"], "name", [], "any", false, false, false, 44), "html", null, true);
+            // line 45
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["dat"], "name", [], "any", false, false, false, 45), "html", null, true);
             echo "</span>
                     </div>
 
@@ -171,17 +173,17 @@ class __TwigTemplate_44f39c3a286089b309ab613c160d0714c638714c3a76f7e1605ced6ec59
                 </div>
 
                 ";
-            // line 53
+            // line 54
             echo "                <p class=\"title\">Email </p>
                 <div class=\"";
-            // line 54
-            echo twig_escape_filter($this->env, (isset($context["class"]) || array_key_exists("class", $context) ? $context["class"] : (function () { throw new RuntimeError('Variable "class" does not exist.', 54, $this->source); })()), "html", null, true);
+            // line 55
+            echo twig_escape_filter($this->env, (isset($context["class"]) || array_key_exists("class", $context) ? $context["class"] : (function () { throw new RuntimeError('Variable "class" does not exist.', 55, $this->source); })()), "html", null, true);
             echo "\">
                     <div>
                         <span class=\"title\">Email: </span>
                         <span class=\"title\">";
-            // line 57
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["dat"], "email", [], "any", false, false, false, 57), "html", null, true);
+            // line 58
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["dat"], "email", [], "any", false, false, false, 58), "html", null, true);
             echo "</span>
                     </div>
 
@@ -191,34 +193,34 @@ class __TwigTemplate_44f39c3a286089b309ab613c160d0714c638714c3a76f7e1605ced6ec59
                 </div>
 
                 ";
-            // line 66
+            // line 67
             echo "                <p class=\"title\">Role </p>
                 <div class=\"";
-            // line 67
-            echo twig_escape_filter($this->env, (isset($context["class"]) || array_key_exists("class", $context) ? $context["class"] : (function () { throw new RuntimeError('Variable "class" does not exist.', 67, $this->source); })()), "html", null, true);
+            // line 68
+            echo twig_escape_filter($this->env, (isset($context["class"]) || array_key_exists("class", $context) ? $context["class"] : (function () { throw new RuntimeError('Variable "class" does not exist.', 68, $this->source); })()), "html", null, true);
             echo "\">
                     <div>
                         <span class=\"title\">Role: </span>     
                         <span class=\"title\"> ";
-            // line 70
-            $context["role"] = twig_split_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["dat"], "roles", [], "any", false, false, false, 70), 0, [], "array", false, false, false, 70), "_");
+            // line 71
+            $context["role"] = twig_split_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["dat"], "roles", [], "any", false, false, false, 71), 0, [], "array", false, false, false, 71), "_");
             echo " ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["role"]) || array_key_exists("role", $context) ? $context["role"] : (function () { throw new RuntimeError('Variable "role" does not exist.', 70, $this->source); })()), 1, [], "array", false, false, false, 70), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["role"]) || array_key_exists("role", $context) ? $context["role"] : (function () { throw new RuntimeError('Variable "role" does not exist.', 71, $this->source); })()), 1, [], "array", false, false, false, 71), "html", null, true);
             echo " </span>
                     </div>
                     
                     ";
-            // line 73
-            $this->loadTemplate("profile/_permissions.html.twig", "profile/index.html.twig", 73)->display($context);
             // line 74
+            $this->loadTemplate("profile/_permissions.html.twig", "profile/index.html.twig", 74)->display($context);
+            // line 75
             echo "                </div>
 
                 ";
-            // line 77
+            // line 78
             echo "                <p class=\"title\">Password </p>
                 <div class=\"";
-            // line 78
-            echo twig_escape_filter($this->env, (isset($context["class"]) || array_key_exists("class", $context) ? $context["class"] : (function () { throw new RuntimeError('Variable "class" does not exist.', 78, $this->source); })()), "html", null, true);
+            // line 79
+            echo twig_escape_filter($this->env, (isset($context["class"]) || array_key_exists("class", $context) ? $context["class"] : (function () { throw new RuntimeError('Variable "class" does not exist.', 79, $this->source); })()), "html", null, true);
             echo "\">
                     <div>
                         <span class=\"title\">Password: **********</span>
@@ -230,11 +232,60 @@ class __TwigTemplate_44f39c3a286089b309ab613c160d0714c638714c3a76f7e1605ced6ec59
                 </div>
 
                 ";
-            // line 89
+            // line 90
+            echo "                ";
+            // line 91
+            echo "                ";
+            if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_DISABLE")) {
+                // line 92
+                echo "                    ";
+                $context["enable_disable"] = "Enable";
+                // line 93
+                echo "                    ";
+                $context["color_btn"] = "btn-outline-success";
+                // line 94
+                echo "                ";
+            } else {
+                // line 95
+                echo "                    ";
+                $context["enable_disable"] = "Disable";
+                // line 96
+                echo "                    ";
+                $context["color_btn"] = "btn-outline-danger";
+                // line 97
+                echo "                ";
+            }
+            // line 98
+            echo "
+                <p class=\"title\">";
+            // line 99
+            echo twig_escape_filter($this->env, (isset($context["enable_disable"]) || array_key_exists("enable_disable", $context) ? $context["enable_disable"] : (function () { throw new RuntimeError('Variable "enable_disable" does not exist.', 99, $this->source); })()), "html", null, true);
+            echo " account</p>
+                <div class=\"";
+            // line 100
+            echo twig_escape_filter($this->env, (isset($context["class"]) || array_key_exists("class", $context) ? $context["class"] : (function () { throw new RuntimeError('Variable "class" does not exist.', 100, $this->source); })()), "html", null, true);
+            echo "\">
+                    <div>
+                        <span class=\"title\">";
+            // line 102
+            echo twig_escape_filter($this->env, (isset($context["enable_disable"]) || array_key_exists("enable_disable", $context) ? $context["enable_disable"] : (function () { throw new RuntimeError('Variable "enable_disable" does not exist.', 102, $this->source); })()), "html", null, true);
+            echo " account</span>
+                    </div>
+
+                    <div>
+                        ";
+            // line 106
+            $this->loadTemplate("profile/_disable.html.twig", "profile/index.html.twig", 106)->display($context);
+            // line 107
+            echo "                    </div>
+                </div>
+
+                ";
+            // line 111
             echo "                <p class=\"title\">Delete account </p>
                 <div class=\"";
-            // line 90
-            echo twig_escape_filter($this->env, (isset($context["class"]) || array_key_exists("class", $context) ? $context["class"] : (function () { throw new RuntimeError('Variable "class" does not exist.', 90, $this->source); })()), "html", null, true);
+            // line 112
+            echo twig_escape_filter($this->env, (isset($context["class"]) || array_key_exists("class", $context) ? $context["class"] : (function () { throw new RuntimeError('Variable "class" does not exist.', 112, $this->source); })()), "html", null, true);
             echo "\">
                     <div>
                         <span class=\"title\">This action is irreversible</span>
@@ -242,9 +293,9 @@ class __TwigTemplate_44f39c3a286089b309ab613c160d0714c638714c3a76f7e1605ced6ec59
 
                     <div>
                         ";
-            // line 96
-            $this->loadTemplate("profile/_delete.html.twig", "profile/index.html.twig", 96)->display($context);
-            // line 97
+            // line 118
+            $this->loadTemplate("profile/_delete.html.twig", "profile/index.html.twig", 118)->display($context);
+            // line 119
             echo "                    </div>
                 </div>
 
@@ -264,9 +315,36 @@ class __TwigTemplate_44f39c3a286089b309ab613c160d0714c638714c3a76f7e1605ced6ec59
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['dat'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 104
+        // line 126
         echo "
     </div>
+";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    // line 130
+    public function block_javascripts($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
+
+        // line 131
+        $this->displayParentBlock("javascripts", $context, $blocks);
+        echo "
+
+<script src=\"";
+        // line 133
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/profile.js"), "html", null, true);
+        echo "\"></script>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -288,7 +366,7 @@ class __TwigTemplate_44f39c3a286089b309ab613c160d0714c638714c3a76f7e1605ced6ec59
 
     public function getDebugInfo()
     {
-        return array (  268 => 104,  248 => 97,  246 => 96,  237 => 90,  234 => 89,  221 => 78,  218 => 77,  214 => 74,  212 => 73,  204 => 70,  198 => 67,  195 => 66,  184 => 57,  178 => 54,  175 => 53,  164 => 44,  158 => 41,  155 => 40,  141 => 28,  138 => 27,  128 => 19,  122 => 16,  119 => 15,  115 => 12,  98 => 11,  93 => 8,  91 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  346 => 133,  341 => 131,  331 => 130,  319 => 126,  299 => 119,  297 => 118,  288 => 112,  285 => 111,  280 => 107,  278 => 106,  271 => 102,  266 => 100,  262 => 99,  259 => 98,  256 => 97,  253 => 96,  250 => 95,  247 => 94,  244 => 93,  241 => 92,  238 => 91,  236 => 90,  223 => 79,  220 => 78,  216 => 75,  214 => 74,  206 => 71,  200 => 68,  197 => 67,  186 => 58,  180 => 55,  177 => 54,  166 => 45,  160 => 42,  157 => 41,  143 => 29,  140 => 28,  130 => 20,  124 => 17,  121 => 16,  117 => 13,  100 => 12,  95 => 9,  93 => 8,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -298,7 +376,8 @@ class __TwigTemplate_44f39c3a286089b309ab613c160d0714c638714c3a76f7e1605ced6ec59
 {% block title %}Profile{% endblock %}
 
 {% block body %}
-    <div>
+    <div id=\"appProfile\">
+        
         {% set class = \"bg-gray-900 text-light p-5 mb-5 rounded h-15 w-15 d-flex justify-content-between\" %}
 
         <p class=\"title\">My profile</p>
@@ -380,7 +459,28 @@ class __TwigTemplate_44f39c3a286089b309ab613c160d0714c638714c3a76f7e1605ced6ec59
                     </div>
                 </div>
 
-                {# Delete #}
+                {# Actions #}
+                {# Disable - Enable account #}
+                {% if is_granted('ROLE_DISABLE') %}
+                    {% set enable_disable = 'Enable' %}
+                    {% set color_btn = 'btn-outline-success' %}
+                {% else %}
+                    {% set enable_disable = 'Disable' %}
+                    {% set color_btn = 'btn-outline-danger' %}
+                {% endif %}
+
+                <p class=\"title\">{{ enable_disable }} account</p>
+                <div class=\"{{ class }}\">
+                    <div>
+                        <span class=\"title\">{{ enable_disable }} account</span>
+                    </div>
+
+                    <div>
+                        {% include \"profile/_disable.html.twig\" %}
+                    </div>
+                </div>
+
+                {# Delete account #}
                 <p class=\"title\">Delete account </p>
                 <div class=\"{{ class }}\">
                     <div>
@@ -399,6 +499,11 @@ class __TwigTemplate_44f39c3a286089b309ab613c160d0714c638714c3a76f7e1605ced6ec59
 
     </div>
 {% endblock %}
-", "profile/index.html.twig", "C:\\xampp\\htdocs\\files\\symfony_folders\\newSymfony\\templates\\profile\\index.html.twig");
+
+{% block javascripts %}
+{{ parent() }}
+
+<script src=\"{{ asset('js/profile.js') }}\"></script>
+{% endblock %}", "profile/index.html.twig", "C:\\xampp\\htdocs\\files\\symfony_folders\\newSymfony\\templates\\profile\\index.html.twig");
     }
 }

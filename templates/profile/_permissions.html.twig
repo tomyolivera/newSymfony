@@ -2,17 +2,18 @@
     <p>Your permissions are</p>
     
     {% set roles = ['BASIC', 'BAN', 'EDIT', 'DELETE'] %}
+    {% set actual_role = app.user.roles[0] %}
 
     {# USER #}
-    {% if app.user.roles[0] == 'ROLE_USER' %}
+    {% if actual_role == 'ROLE_USER' %}
     {{ roles[0] }}
 
     {# MOD #}
-    {% elseif app.user.roles[0] == 'ROLE_MOD' %}
+    {% elseif actual_role == 'ROLE_MOD' %}
     {{ roles[0] }}
 
     {# ADMIN #}
-    {% elseif app.user.roles[0] == 'ROLE_ADMIN' %}
+    {% elseif actual_role == 'ROLE_ADMIN' %}
     {% set permissionsAdmin = roles|length - 2 %}
 
     {% for i in range(low = 0, high = permissionsAdmin, step = 1) %}
@@ -23,8 +24,12 @@
     {% endfor %}
     
     {# OWNER #}
-    {% else %}
+    {% elseif actual_role == 'ROLE_OWNER' %}
     {{ roles|join('-') }}
+
+    {# NO_PERMISSIONS #}
+    {% else %}
+    
 
     {% endif %}
 </div>

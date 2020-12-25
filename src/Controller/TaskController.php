@@ -6,14 +6,13 @@ use App\Entity\Task;
 use App\Form\TaskType;
 use App\Repository\TaskRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class TaskController extends AbstractController
 {
-    private const IS_NOT_XML = "This is not a XML request";
-
     /**
      * @Route("/task", name="task_index")
      */
@@ -85,28 +84,26 @@ class TaskController extends AbstractController
      */
     public function delete(Request $request, Task $task): Response
     {
-        if ($task->getUser() !== $this->getUser()) {
-            throw $this->createAccessDeniedException();
-        }
-        
-        if ($this->isCsrfTokenValid('delete'.$task->getId(), $request->request->get('_token'))) {
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->remove($task);
-            $entityManager->flush();
-        }
+        if ($task->getUser() !== $this->getUser()) throw new \Exception(self::NOT_VALID_USER);
+        if (!$this->isCsrfTokenValid('delete'.$task->getId(), $request->request->get('_token'))) throw new \Exception(self::NOT_VALID_TOKEN);
+
+        $entityManager = $this->getDoctrine()->getManager();
+        $entityManager->remove($task);
+        $entityManager->flush();
 
         return $this->redirectToRoute('task_index');
     }
 
     /**
-     * @Route("/task/deleteAll", name="task_delete_all", methods={"DELETE"})
+     * @Route("/task/deleteAll", options={"expose"=true}, name="task_delete_all", methods={"DELETE"})
      */
     public function deleteAll(Request $request, TaskRepository $taskRepository): Response
     {
-        if ($this->isCsrfTokenValid('delete', $request->request->get('_token'))) {
-            $taskRepository->deleteAll($this->getUser());
-        }
+        if(!$request->isXmlHttpRequest()) throw new \Exception(self::IS_NOT_XML);
+        if (!$this->isCsrfTokenValid('delete', $request->request->get('_token'))) throw new \Exception(self::NOT_VALID_TOKEN);
 
-        return $this->redirectToRoute('task_index');
+        $taskRepository->deleteAll($this->getUser());
+        return new JsonResponse('');
+        // return $this->redirectToRoute('task_index');
     }
 }

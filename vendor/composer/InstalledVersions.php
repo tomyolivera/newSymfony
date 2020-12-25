@@ -14,24 +14,24 @@ class InstalledVersions
 private static $installed = array (
   'root' => 
   array (
-    'pretty_version' => 'dev-master',
-    'version' => 'dev-master',
+    'pretty_version' => 'dev-main',
+    'version' => 'dev-main',
     'aliases' => 
     array (
     ),
-    'reference' => '9bf66ce32f2da8bb5487d5ee440b356a480b5b7f',
+    'reference' => '1bf559705e30721586ba4122b9b897036396ae5d',
     'name' => '__root__',
   ),
   'versions' => 
   array (
     '__root__' => 
     array (
-      'pretty_version' => 'dev-master',
-      'version' => 'dev-master',
+      'pretty_version' => 'dev-main',
+      'version' => 'dev-main',
       'aliases' => 
       array (
       ),
-      'reference' => '9bf66ce32f2da8bb5487d5ee440b356a480b5b7f',
+      'reference' => '1bf559705e30721586ba4122b9b897036396ae5d',
     ),
     'composer/package-versions-deprecated' => 
     array (
@@ -273,6 +273,13 @@ private static $installed = array (
       array (
       ),
       'reference' => 'f65ae0f9dcbdd9d6ad3abb721a9e09c3d7d868a4',
+    ),
+    'paragonie/random_compat' => 
+    array (
+      'replaced' => 
+      array (
+        0 => '2.*',
+      ),
     ),
     'php-http/async-client-implementation' => 
     array (
@@ -813,6 +820,27 @@ private static $installed = array (
       array (
       ),
       'reference' => '39d483bdf39be819deabf04ec872eb0b2410b531',
+    ),
+    'symfony/polyfill-php56' => 
+    array (
+      'replaced' => 
+      array (
+        0 => '*',
+      ),
+    ),
+    'symfony/polyfill-php70' => 
+    array (
+      'replaced' => 
+      array (
+        0 => '*',
+      ),
+    ),
+    'symfony/polyfill-php71' => 
+    array (
+      'replaced' => 
+      array (
+        0 => '*',
+      ),
     ),
     'symfony/polyfill-php72' => 
     array (

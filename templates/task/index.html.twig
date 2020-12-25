@@ -9,6 +9,7 @@
 
         <div class="d-flex align-center">
             {% set limit =  15 %}
+            <input type="hidden" id="limit_tasks" value="{{ limit }}">
             {% set isValid = tasks|length < limit %}
 
             {% if isValid %}
@@ -18,19 +19,24 @@
                 <div class="text-light bg-red-600 p-2 rounded">You can't have more than {{ limit }} tasks !!</div>
             {% endif %}
 
-            {% if tasks %}
-                {% include "task/_delete_all.html.twig" %}
-            {% endif %}
+            <span id="btn_delete_all">
+                {% if tasks %}
+                    {% include "task/_delete_all.html.twig" %}
+                {% endif %}
+            </span>
 
         </div>
     
-        <div class="
+        <div
+        id="tasks_length"
+        class="
         text-light
         p-2
         rounded
         {% if tasks|length < 8 %} bg-green-600 {% elseif tasks|length < 13 %} bg-yellow-600 {% elseif isValid %} bg-orange-600 {% else %} bg-red-600 {% endif %}
-
-        ">{{ tasks|length }} of {{ limit }} tasks</div>
+        ">
+            {{ tasks|length }} of {{ limit }} tasks
+        </div>
 
     </div>
 
@@ -55,7 +61,7 @@
                                 </th>
                             </tr>
                         </thead>
-                        <tbody class="bg-dark text-light divide-y">
+                        <tbody class="bg-dark text-light divide-y" id="tbody">
                             {% for task in tasks %}        
                                 <tr>
                                     <td class="px-6 py-4">
@@ -84,8 +90,6 @@
                                     <td class=""></td>
                                     <td class=""></td>
                                 </tr>
-                            
-
                             {% endfor %}
                         </tbody>
                     </table>
@@ -94,4 +98,11 @@
         </div>
     </div>
 
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('bundles/fosjsrouting/js/router.min.js') }}"></script>
+    <script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
+    <script src="{{ asset('js/tasks.js') }}"></script>
 {% endblock %}

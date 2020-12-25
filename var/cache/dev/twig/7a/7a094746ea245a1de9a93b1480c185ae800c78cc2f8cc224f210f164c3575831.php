@@ -94,18 +94,15 @@ class __TwigTemplate_4f1b251bc5fde3b69ce833e4fa0d4e0db2f355a349b683e0a605187138f
             if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_BAN")) {
                 // line 9
                 echo "            <p class=\"text-danger h1\">Your account is banned, you only have access to the Home page</p>
-            ";
-            } else {
-                // line 11
-                echo "            <p class=\"title\">Home</p>
-                
         ";
             }
-            // line 14
+            // line 11
             echo "    ";
         }
-        // line 15
-        echo "    
+        // line 12
+        echo "
+    <p class=\"title\">Home</p>
+
     
 
 ";
@@ -129,7 +126,7 @@ class __TwigTemplate_4f1b251bc5fde3b69ce833e4fa0d4e0db2f355a349b683e0a605187138f
 
     public function getDebugInfo()
     {
-        return array (  108 => 15,  105 => 14,  100 => 11,  96 => 9,  93 => 8,  91 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  103 => 12,  100 => 11,  96 => 9,  93 => 8,  91 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -143,12 +140,11 @@ class __TwigTemplate_4f1b251bc5fde3b69ce833e4fa0d4e0db2f355a349b683e0a605187138f
     {% if is_granted('IS_AUTHENTICATED_FULLY') %}
         {% if is_granted('ROLE_BAN') %}
             <p class=\"text-danger h1\">Your account is banned, you only have access to the Home page</p>
-            {% else %}
-            <p class=\"title\">Home</p>
-                
         {% endif %}
     {% endif %}
-    
+
+    <p class=\"title\">Home</p>
+
     
 
 {% endblock %}

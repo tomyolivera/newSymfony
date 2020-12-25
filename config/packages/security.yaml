@@ -37,8 +37,9 @@ security:
     access_control:
         - { path: /admin, roles: [ROLE_MOD] }
         - { path: ^/admin/users, roles: [ROLE_ADMIN] }
-        - { path: ^/task, roles: [ROLE_USER] }
-        - { path: ^/profile, roles: [ROLE_USER] }
+        - { path: ^/chat, roles: [ROLE_USER] }
+        - { path: ^/task, roles: [ROLE_DISABLE, ROLE_USER] }
+        - { path: ^/profile, roles: [ROLE_DISABLE, ROLE_USER] }
     role_hierarchy:
         ROLE_MOD: ROLE_USER
         ROLE_ADMIN: [ROLE_MOD, ROLE_ALLOWED_TO_BAN, ROLE_ALLOWED_TO_EDIT]

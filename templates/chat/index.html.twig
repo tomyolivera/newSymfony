@@ -1,0 +1,106 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Chats{% endblock %}
+
+{% block body %}
+
+    <div class="row text-light d-flex">
+        <div class="col col-md-4">
+            <div class="bg-gray-800 p-2 d-flex justify-content-between align-center">
+                <div class="rounded-full h-12 w-12 bg-yellow-800 flex items-center justify-center">
+                    PHOTO
+                </div>
+
+                <div class="more">
+                    New chat | Options
+                </div>
+            </div>
+
+            <div class="bg-gray-900 p-2">
+                <div class="p-2">
+                    <input type="text" placeholder="Search a message or chat" class="form-control">
+                </div>
+
+                {# CHATS #}                
+                <div class="side">
+                    {% for i in range(low = 0, high = 20, step = 1) %}
+                        <a href="#" class="p-2 row hover:bg-gray-800 text-light" style="text-decoration:none;width:100%;">
+                            <div class="photo col col-md-2">
+                                <div class="rounded-full h-12 w-12 bg-yellow-800 flex items-center justify-center">
+                                    PHOTO
+                                </div>
+                            </div>
+
+                            <div class="info col col-md-10">
+                                <div class="d-flex justify-content-between">
+                                    <span class="titles h5">Title</span>
+                                    <span class="hour h6 text-orange-500">12:00</span>
+                                </div>
+
+                                <div class="last_message" style="height:30px;overflow:hidden;">
+                                    <span><span class="text-primary">Carlos</span>: Lorem ipsum dolor sit amet consectetur, adipisicing elit</span>
+                                </div>
+                            </div>
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        {# CONTENT CHAT #}
+        <div class="col col-md-8 bg-gray-800 divide-y divide-gray-700">
+            <div class="bg-gray-800 p-2 flex justify-between align-center">
+                <div class="row">
+                    <div class="col col-md-2 mr-3">
+                        <div class="rounded-full h-12 w-12 bg-yellow-800 flex items-center justify-center">PHOTO</div>
+                    </div>
+
+                    <div class="col col-md-9">
+                        <div>
+                            <span class="titles h5">Title</span>
+                        </div>
+
+                        <div class="last_message">
+                            Person1, Person2, Person3
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    Search | Options
+                </div>
+            </div>
+
+            {# MESSAGES #}
+            <div class="side">
+                {% for i in range(low = 0, high = 50, step = 1) %}
+                    <div class="p-3 my-3 bg-gray-700 w-25">
+                        <div class="flex justify-between">
+                            <span class="h6 text-red-400">Carlos</span>
+                            <span class="hour h6 text-orange-500">12:00</span>
+                        </div>
+
+                        <span>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit
+                        </span>
+                    </div>
+                    
+                {% endfor %}
+            </div>
+
+            {# SEND MESSAGE #}
+            <div class="send-message flex justify-between p-3">
+                <input class="form-control" placeholder="Message">
+                <button class="button-green mx-3 flex align-center" :disabled="disabled"><i>send</i></button>
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}

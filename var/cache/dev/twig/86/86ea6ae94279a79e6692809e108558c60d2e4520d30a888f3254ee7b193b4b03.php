@@ -65,7 +65,10 @@ class __TwigTemplate_50f8d956006720038c06bb800177c848dd9375660b220b659873b32775e
             // line 13
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("task_index");
             echo "\" class=\"d-block p-3 d-flex align-center text-green-400\"><i>work</i> Tasks</a>
-                <a href=\"#\" class=\"d-block p-3 d-flex align-center text-pink-600\"><i>chat</i> Chats</a>
+                <a href=\"";
+            // line 14
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("chat");
+            echo "\" class=\"d-block p-3 d-flex align-center text-pink-600\"><i>chat</i> Chats</a>
             ";
             // line 15
             if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("IS_AUTHENTICATED_FULLY")) {
@@ -143,7 +146,7 @@ class __TwigTemplate_50f8d956006720038c06bb800177c848dd9375660b220b659873b32775e
 
     public function getDebugInfo()
     {
-        return array (  106 => 27,  102 => 25,  97 => 23,  92 => 22,  86 => 20,  80 => 18,  78 => 17,  73 => 16,  71 => 15,  66 => 13,  62 => 12,  59 => 11,  52 => 7,  50 => 6,  43 => 1,);
+        return array (  109 => 27,  105 => 25,  100 => 23,  95 => 22,  89 => 20,  83 => 18,  81 => 17,  76 => 16,  74 => 15,  70 => 14,  66 => 13,  62 => 12,  59 => 11,  52 => 7,  50 => 6,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -161,7 +164,7 @@ class __TwigTemplate_50f8d956006720038c06bb800177c848dd9375660b220b659873b32775e
            {% else %}        
                 <a href=\"{{path('index')}}\" class=\"d-block p-3 d-flex align-center text-yellow-500\"><i>home</i> Home</a>
                 <a href=\"{{path('task_index')}}\" class=\"d-block p-3 d-flex align-center text-green-400\"><i>work</i> Tasks</a>
-                <a href=\"#\" class=\"d-block p-3 d-flex align-center text-pink-600\"><i>chat</i> Chats</a>
+                <a href=\"{{path('chat')}}\" class=\"d-block p-3 d-flex align-center text-pink-600\"><i>chat</i> Chats</a>
             {% if is_granted('IS_AUTHENTICATED_FULLY') %}
                 <a href=\"{{path('profile')}}\" class=\"d-block p-3 d-flex align-center text-blue-600\"><i>person</i> Profile</a>
             {% if is_granted('ROLE_ADMIN') %}
